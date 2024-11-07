@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\tcpclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\tcpclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\appsetting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:appsetting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\modeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\modeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\opcclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\opcclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\tcpserverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\tcpserverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 636,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwEMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T01:02:43.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsetting.json",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\appsetting.json",
+              "RelativeDocumentMoniker": "appsetting.json",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\appsetting.json",
+              "RelativeToolTip": "appsetting.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T00:50:07.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\ModeConfiguration.cs",
+              "RelativeDocumentMoniker": "Model\\ModeConfiguration.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\ModeConfiguration.cs",
+              "RelativeToolTip": "Model\\ModeConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:38:36.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:38:34.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TCPServerService.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPServerService.cs",
+              "RelativeDocumentMoniker": "BackgroundTask\\TCPServerService.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPServerService.cs",
+              "RelativeToolTip": "BackgroundTask\\TCPServerService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAYwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:38:31.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OPCClientService.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\OPCClientService.cs",
+              "RelativeDocumentMoniker": "BackgroundTask\\OPCClientService.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\OPCClientService.cs",
+              "RelativeToolTip": "BackgroundTask\\OPCClientService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:38:30.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TCPClientService.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPClientService.cs",
+              "RelativeDocumentMoniker": "BackgroundTask\\TCPClientService.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPClientService.cs",
+              "RelativeToolTip": "BackgroundTask\\TCPClientService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:38:29.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "APIController.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\APIController.cs",
+              "RelativeDocumentMoniker": "Controller\\APIController.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\APIController.cs",
+              "RelativeToolTip": "Controller\\APIController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:38:21.231Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 142,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{605322a2-17ae-43f4-b60f-766556e46c87}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

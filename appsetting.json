@@ -1,0 +1,40 @@
+{
+  "SelectedModeId": "1",
+  "ModeConfigurations": [
+    {
+      "ModeId": "1",
+      "RobotName": "Robco1",
+      "EndpointType": "TCP",
+      "EndpointRole": "Server",
+      "EndpointIP": "192.168.3.161",
+      "EndpointPort": "4840",
+      "MESPort": "8080"
+    },
+    {
+      "ModeId": "2",
+      "RobotName": "RobotB",
+      "EndpointType": "TCP",
+      "EndpointRole": "Server",
+      "EndpointIP": "192.168.1.101",
+      "EndpointPort": "502",
+      "MESPort": "8081"
+    },
+    {
+      "ModeId": "3",
+      "RobotName": "RobotC",
+      "EndpointType": "NA",
+      "EndpointRole": "NA",
+      "MESPort": "8082"
+    }
+  ],
+  "OpcNodeIds": {
+    "RobotA": {
+      "ActionNodeId": "ns=2;s=RobotA/Actions/Start",
+      "StatusNodeId": "ns=2;s=RobotA/Status"
+    },
+    "RobotB": {
+      "ActionNodeId": "ns=2;s=RobotB/Actions/Stop",
+      "StatusNodeId": "ns=2;s=RobotB/Status"
+    }
+  }
+}

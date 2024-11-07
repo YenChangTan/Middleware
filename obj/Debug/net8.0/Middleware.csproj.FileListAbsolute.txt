@@ -1,0 +1,5 @@
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.csproj.AssemblyReference.cache
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.AssemblyInfoInputs.cache
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.AssemblyInfo.cs
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.csproj.CoreCompileInputs.cache
