@@ -1,14 +1,24 @@
 ﻿using Microsoft.Extensions.Hosting;
+using Middleware.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Middleware.Fundamental;
 
 namespace Middleware.BackgroundTask
 {
     public class TCPClientService :BackgroundService
     {
+        ModeConfiguration _modeConfiguration = new ModeConfiguration();
+        TCP _tcp = new TCP();
+
+        public TCPClientService(ModeConfiguration modeConfiguration, TCP tcp)
+        {
+            _modeConfiguration = modeConfiguration;
+            _tcp = tcp;
+        }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             // Your TCP server logic here

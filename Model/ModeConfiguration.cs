@@ -10,6 +10,7 @@ namespace Middleware.Model
     {
         public string ModeId { get; set; }
         public string RobotName { get; set; }
+        public string TaskNameInTaskScheduler { get; set; }
         public string EndpointType { get; set; }  // OPC, TCP, NA
         public string EndpointRole { get; set; }  // Server, Client, NA
         public string EndpointIP { get; set; }

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Options;
 using Middleware.BackgroundTask;
 using Middleware.Controller;
 using Middleware.Model;
+using Middleware.Fundamental;
 
 namespace Middleware
 {
@@ -26,18 +27,27 @@ namespace Middleware
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<List<ModeConfiguration>>(Configuration.GetSection("ModeConfigurations"));
+            ModeConfiguration selectedConfig = new ModeConfiguration();
+            var modeConfigurations = Configuration.GetSection("ModeConfigurations").Get<List<ModeConfiguration>>();
             var selectedModeId = Configuration["SelectedModeId"];
-            var selectedConfig = Configuration.GetSection("ModeConfigurations")
-                .Get<List<ModeConfiguration>>()
-                .FirstOrDefault(config => config.ModeId == selectedModeId);
+            TCP tcp = new TCP();
+            
+            foreach (var modeConfiguration in modeConfigurations)
+            {
+                if (modeConfiguration.ModeId == selectedModeId)
+                {
+                    selectedConfig = modeConfiguration;
+                }
+            }
+
             if (selectedConfig.EndpointType == "TCP")
             {
+                services.AddSingleton(tcp);
                 services.AddHostedService<TCPClientService>();
-                services.AddHostedService<TCPServerService>();
             }
             else if (selectedConfig.EndpointType == "OPC")
             {
+                services.AddHostedService<OPCClientService>();
             }
             else if (selectedConfig.EndpointType == "NA")
             {
@@ -56,28 +66,6 @@ namespace Middleware
 
                 }
             );
-
-            services.AddHostedService<TCPClientService>();
-
-            services.AddHostedService(provider =>
-            {
-                var selectedConfig = provider.GetRequiredService<ModeConfiguration>();
-
-                if (selectedConfig.EndpointType == "TCP")
-                {
-                    return new TCPClientService(); // Register TcpClientService
-                }
-                else if (selectedConfig.EndpointType == "OPC")
-                {
-                    return new OPCClientService(); // Register OpcClientService
-                }
-                else if (selectedConfig.EndpointType == "NA")
-                {
-                    return new TCPServerService(); // Register TaskSchedulerService for NA
-                }
-
-                throw new InvalidOperationException("No valid background service found for the selected configuration.");
-            });
 
             services.AddControllers()
                 .AddJsonOptions(options =>

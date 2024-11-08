@@ -69,6 +69,10 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "OPCFoundation.NetStandard.Opc.Ua.Client": {
+              "target": "Package",
+              "version": "[1.5.374.126, )"
             }
           },
           "imports": [
