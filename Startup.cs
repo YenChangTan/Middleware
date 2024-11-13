@@ -19,59 +19,61 @@ namespace Middleware
     public class Startup
     {
         public IConfiguration Configuration;
-
+        private readonly string selectedModeId;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            selectedModeId = configuration.GetValue<string>("SelectedModeId");
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
             ModeConfiguration selectedConfig = new ModeConfiguration();
-            var modeConfigurations = Configuration.GetSection("ModeConfigurations").Get<List<ModeConfiguration>>();
-            var selectedModeId = Configuration["SelectedModeId"];
-            TCP tcp = new TCP();
-            
+            var modeConfigurations = new List<ModeConfiguration>();
+            Configuration.GetSection("ModeConfigurations").Bind(modeConfigurations);
+            //var modeConfigurations = Configuration.GetSection("ModeConfigurations").Get<List<ModeConfiguration>>();
+            //var selectedModeId = Configuration.GetValue<string>("SelectedModeId");
             foreach (var modeConfiguration in modeConfigurations)
             {
                 if (modeConfiguration.ModeId == selectedModeId)
                 {
                     selectedConfig = modeConfiguration;
+                    services.AddSingleton<ModeConfiguration>(selectedConfig);
+                    
                 }
             }
-
             if (selectedConfig.EndpointType == "TCP")
             {
-                services.AddSingleton(tcp);
-                services.AddHostedService<TCPClientService>();
+                TCP tcp = new TCP();
+                services.AddSingleton<TCP>(tcp);
+                services.AddSingleton<TaskSyncService>();
+                services.AddHostedService<TCPServerService>();
+                
             }
-            else if (selectedConfig.EndpointType == "OPC")
-            {
-                services.AddHostedService<OPCClientService>();
-            }
-            else if (selectedConfig.EndpointType == "NA")
-            {
-
-            }
-            services.AddSingleton(provider =>
-                {
-                    var modeConfiguration = provider.GetRequiredService<IOptions<List<ModeConfiguration>>>().Value;
-                    var selectedConfig = modeConfiguration.FirstOrDefault(config => config.ModeId == selectedModeId);
-                    if (selectedConfig == null)
-                    {
-                        throw new InvalidOperationException($"Configuration for ModeId '{selectedModeId}' not found.");
-                    }
-
-                    return selectedConfig;
-
-                }
-            );
-
+            BLLServer.SetBaseAddress(selectedConfig.MESIP, selectedConfig.MESPort);
+            BLLServer.SetBearerToken(selectedConfig.MESToken);
+            BLLServer.SetTimeOut(Configuration.GetValue<int>("RequestTimeOut"));
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.PropertyNamingPolicy = null;
                 });
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage(); // Use developer exception page
+            }
+
+            app.UseRouting(); // Use routing
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers(); // Map controller endpoints
+            });
+            //await Task.Run(() => opcClient.LoadConfig());
         }
     }
 }

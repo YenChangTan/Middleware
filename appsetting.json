@@ -1,40 +1,126 @@
 {
-  "SelectedModeId": "1",
+  "SelectedModeId": "4",
+  "ApplicationUrl": "http://0.0.0.0:4847",
+  "RequestTimeOut": "3000",
   "ModeConfigurations": [
     {
       "ModeId": "1",
-      "RobotName": "Robco1",
+      "RobotName": "Magazine Loader",
+      "SelfAPIPort": "4862",
       "EndpointType": "TCP",
-      "EndpointRole": "Server",
-      "EndpointIP": "192.168.3.161",
-      "EndpointPort": "4840",
-      "MESPort": "8080"
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4863",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4864",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "TimeOut": "5000"
     },
     {
       "ModeId": "2",
-      "RobotName": "RobotB",
+      "RobotName": "Robco 1",
+      "SelfAPIPort": "4841",
       "EndpointType": "TCP",
-      "EndpointRole": "Server",
-      "EndpointIP": "192.168.1.101",
-      "EndpointPort": "502",
-      "MESPort": "8081"
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4842",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4843",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
     },
     {
       "ModeId": "3",
-      "RobotName": "RobotC",
-      "EndpointType": "NA",
-      "EndpointRole": "NA",
-      "MESPort": "8082"
-    }
-  ],
-  "OpcNodeIds": {
-    "RobotA": {
-      "ActionNodeId": "ns=2;s=RobotA/Actions/Start",
-      "StatusNodeId": "ns=2;s=RobotA/Status"
+      "RobotName": "Robco 2",
+      "SelfAPIPort": "4844",
+      "EndpointType": "TCP",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4845",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4846",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
     },
-    "RobotB": {
-      "ActionNodeId": "ns=2;s=RobotB/Actions/Stop",
-      "StatusNodeId": "ns=2;s=RobotB/Status"
+    {
+      "ModeId": "4",
+      "RobotName": "Conveyor Station 1",
+      "SelfAPIPort": "4847",
+      "EndpointType": "TCP",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4848",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4849",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "TimeOut": "10000"
+    },
+    {
+      "ModeId": "5",
+      "RobotName": "Robco Station 1",
+      "SelfAPIPort": "4850",
+      "EndpointType": "TCP",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4851",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4852",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+    },
+    {
+      "ModeId": "6",
+      "RobotName": "Robco Station 2",
+      "SelfAPIPort": "4853",
+      "EndpointType": "TCP",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4854",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4855",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+    },
+    {
+      "ModeId": "7",
+      "RobotName": "Scara",
+      "SelfAPIPort": "4856",
+      "EndpointType": "TCP",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4857",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4858",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+    },
+    {
+      "ModeId": "8",
+      "RobotName": "Robco Station 4",
+      "SelfAPIPort": "4859",
+      "EndpointType": "TCP",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4860",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4861",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "TimeOut": "5000"
+    },
+    {
+      "ModeId": "8",
+      "RobotName": "Robco Station 4",
+      "SelfAPIPort": "4862",
+      "EndpointType": "API",
+      "ServerIP": "127.0.0.1",
+      "ServerPort": "4863",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "TimeOut": "5000"
     }
-  }
+  ]
 }
