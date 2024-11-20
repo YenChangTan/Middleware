@@ -1,7 +1,6 @@
 {
   "SelectedModeId": "4",
   "ApplicationUrl": "http://0.0.0.0:4847",
-  "RequestTimeOut": "3000",
   "ModeConfigurations": [
     {
       "ModeId": "1",
@@ -12,9 +11,10 @@
       "ClientPort": "4863",
       "ServerIP": "127.0.0.1",
       "ServerPort": "4864",
-      "MESIP": "192.168.3.111",
+      "MESIP": "192.168.3.108",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
     },
     {
@@ -28,7 +28,8 @@
       "ServerPort": "4843",
       "MESIP": "192.168.3.111",
       "MESPort": "82",
-      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000"
     },
     {
       "ModeId": "3",
@@ -41,7 +42,8 @@
       "ServerPort": "4846",
       "MESIP": "192.168.3.111",
       "MESPort": "82",
-      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000"
     },
     {
       "ModeId": "4",
@@ -52,10 +54,10 @@
       "ClientPort": "4848",
       "ServerIP": "127.0.0.1",
       "ServerPort": "4849",
-      "MESIP": "192.168.3.111",
+      "MESIP": "192.168.3.108",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
-      "TimeOut": "10000"
+      "MESRequestTimeOut": "3000"
     },
     {
       "ModeId": "5",
@@ -68,7 +70,8 @@
       "ServerPort": "4852",
       "MESIP": "192.168.3.111",
       "MESPort": "82",
-      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000"
     },
     {
       "ModeId": "6",
@@ -81,7 +84,8 @@
       "ServerPort": "4855",
       "MESIP": "192.168.3.111",
       "MESPort": "82",
-      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000"
     },
     {
       "ModeId": "7",
@@ -94,7 +98,8 @@
       "ServerPort": "4858",
       "MESIP": "192.168.3.111",
       "MESPort": "82",
-      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF"
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000"
     },
     {
       "ModeId": "8",
@@ -108,11 +113,12 @@
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
     },
     {
-      "ModeId": "8",
-      "RobotName": "Robco Station 4",
+      "ModeId": "9",
+      "RobotName": "FEXA",
       "SelfAPIPort": "4862",
       "EndpointType": "API",
       "ServerIP": "127.0.0.1",
@@ -120,6 +126,9 @@
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "DeviceIp": "10.42.0.1",
+      "DevicePort": "30381",
+      "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
     }
   ]

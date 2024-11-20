@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Middleware.Model;
 
 namespace Middleware.DataHolder
 {
-    public class TimeRecorder
+    public static class LoaderReportData
     {
-        DateTime InTime { get; set; }
+        public static LoaderReport loaderReport = new LoaderReport();
     }
 }

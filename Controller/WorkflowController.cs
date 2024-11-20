@@ -19,12 +19,12 @@ namespace Middleware.Controller
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class APIController: ControllerBase
+    public class WorkflowController: ControllerBase
     {
         public ModeConfiguration _modeConfiguration {  get; set; }
         public TaskSyncService _taskSyncService { get; set; }
         public TCP _tcp { get; set; }
-        public APIController(ModeConfiguration modeConfiguration, TaskSyncService taskSyncService, TCP tcp)
+        public WorkflowController(ModeConfiguration modeConfiguration, TaskSyncService taskSyncService, TCP tcp)
         {
             _modeConfiguration = modeConfiguration;
             _taskSyncService = taskSyncService;
@@ -112,7 +112,7 @@ namespace Middleware.Controller
                             {
                                 createTask.data.deviceId = taskMapping.Value.deviceId;
                                 createTask.data.orderId = taskMapping.Key;
-                                foreach(var subtask in taskMapping.Value.subtaskInfos)
+                                foreach (var subtask in taskMapping.Value.subtaskInfos)
                                 {
                                     if (subtask.type == "route")
                                     {
@@ -144,7 +144,7 @@ namespace Middleware.Controller
                         }
                         if (!isFound)
                         {
-                            result.HasResult = false;
+                            result.HasResult = true;
                             result.Message = "TaskId not found";
                             return Ok(result);
                         }
@@ -197,7 +197,7 @@ namespace Middleware.Controller
                                 task.isDone = true;
                                 BLLServer server = new BLLServer();
                                 MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
-                                for (int i = 0; i < 5 & (await server.UpdateMachineStatus(task.orderId, "Done") != 1); i++)//need to update here, put updatemachinestatus is just for temporary.
+                                for (int i = 0; i < 5 & (await server.UpdateMachineStatus(task.orderId, "Done")!=1); i++)//need to update here, put updatemachinestatus is just for temporary.
                                 {
                                     if (i == 4)
                                     {

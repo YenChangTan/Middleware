@@ -10,6 +10,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Middleware.Controller;
+using Middleware.DataHolder;
+using Newtonsoft.Json;
+using System.Text.Json.Nodes;
 //using System.BigChangus.Lib;
 namespace Middleware.BackgroundTask
 {
@@ -17,6 +20,7 @@ namespace Middleware.BackgroundTask
     {
         public readonly ModeConfiguration _modeConfiguration = new ModeConfiguration();
         public readonly TaskSyncService _taskSyncService = new TaskSyncService();
+        public bool MagazineCounter = false;
         public TCPServerService(ModeConfiguration modeConfiguration, TaskSyncService taskSyncService)
         {
             _modeConfiguration = modeConfiguration;
@@ -111,20 +115,36 @@ namespace Middleware.BackgroundTask
                                 else
                                 {
                                     await stream.WriteAsync(Encoding.ASCII.GetBytes("DNDN"));
+                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
+                                    if (completedTask == _taskSyncService.ProceedTaskSource.Task)
+                                    {
+                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
+                                    }
+                                    else
+                                    {
+                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+                                    }
                                 }
-                                var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
-                                if (completedTask == _taskSyncService.ProceedTaskSource.Task)
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
-                                }
-                                else
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                                }
-                                
                             }
                             else if (Encoding.ASCII.GetString(buffer,0,4) == "UPUP")
                             {
+                                MagazineCounter = !MagazineCounter;
+                                if (MagazineCounter)
+                                {
+                                    LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
+                                    
+                                }
+                                else
+                                {
+                                    LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
+                                    
+                                }
+                                if (LoaderReportData.loaderReport.TimeStamp != null && LoaderReportData.loaderReport.TimeStamp.Any())
+                                {
+                                    LoaderReportData.loaderReport.StartTime = LoaderReportData.loaderReport.TimeStamp.First();
+                                    LoaderReportData.loaderReport.EndTime = LoaderReportData.loaderReport.TimeStamp.Last();
+                                }
+                                int updateMagazineLoaderResult = await server.UpdateMagazineReport(_modeConfiguration.RobotName, JsonConvert.SerializeObject(LoaderReportData.loaderReport));
                                 int updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "FULL");
                                 if (updateMachineStatusResult == 0)
                                 {
@@ -133,16 +153,21 @@ namespace Middleware.BackgroundTask
                                 else
                                 {
                                     await stream.WriteAsync(Encoding.ASCII.GetBytes("UPUP"));
+                                    LoaderReportData.loaderReport = new LoaderReport();
+                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
+                                    if (completedTask == _taskSyncService.ProceedTaskSource.Task)
+                                    {
+                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
+                                    }
+                                    else
+                                    {
+                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+                                    }
                                 }
-                                var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
-                                if (completedTask == _taskSyncService.ProceedTaskSource.Task)
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
-                                }
-                                else
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                                }
+                            }
+                            else if (Encoding.ASCII.GetString(buffer,0,3) == "OUT")
+                            {
+                                LoaderReportData.loaderReport.TimeStamp.Add(DateTime.Now);
                             }
                             else
                             {
@@ -242,27 +267,41 @@ namespace Middleware.BackgroundTask
                                         break;
                                 }
                             }
-                            else
+                            else if (Encoding.ASCII.GetString(buffer,0, DataLength) == "DOLASER")
                             {
-                                if (Encoding.ASCII.GetString(buffer,0, DataLength) == "DOLASER")
+                                Array.Copy(buffer, byteToSend, DataLength);
+                                await stream.WriteAsync(byteToSend);
+                                //need to add update tho
+                                var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
+                                if (completedTask == _taskSyncService.ProceedTaskSource.Task)
                                 {
-                                    Array.Copy(buffer, byteToSend, DataLength);
-                                    await stream.WriteAsync(byteToSend);
-                                    //need to add update tho
-                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
-                                    if (completedTask == _taskSyncService.ProceedTaskSource.Task)
-                                    {
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("TASKEND"));
-                                    }
-                                    else
-                                    {
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
-                                    }
+                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("TASKEND"));
                                 }
                                 else
                                 {
                                     await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
                                 }
+                            }
+                            else if (Encoding.ASCII.GetString(buffer, 0, DataLength) == "CANPICK")
+                            {
+                                int updateMachineStatusResult;
+                                //need to add to update to MES, confirm JSON Body
+                                for (int i = 0; i < 5 & (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Busy")) != 1; i++)
+                                {
+                                }
+                                if(updateMachineStatusResult == 1)
+                                {
+                                    Array.Copy(buffer, byteToSend, DataLength);
+                                    await stream.WriteAsync(byteToSend);
+                                }
+                                else
+                                {
+                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                }
+                            }
+                            else
+                            {
+                                await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
                             }
                         }
                         else

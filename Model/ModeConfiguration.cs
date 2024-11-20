@@ -19,6 +19,9 @@ namespace Middleware.Model
         public string MESIP {  get; set; }
         public int MESPort { get; set; }
         public string MESToken { get; set; }
+        public string DeviceIp { get; set; }
+        public int DevicePort { get; set; }
+        public int MESRequestTimeOut { get; set; }
         public int TimeOut { get; set; }
 
         // Optional: for OPC-related settings

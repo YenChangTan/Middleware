@@ -16,6 +16,7 @@ namespace Middleware.Model
         public string MachineStatus { get; set; }
         public string AlarmStatus { get; set; }
         public string InspectionStatus { get; set; }
+        public string RawData { get; set; }
 
         public MachineStatusUpdate()
         {

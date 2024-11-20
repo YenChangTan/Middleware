@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,8 @@ using Microsoft.Extensions.Options;
 using Middleware.BackgroundTask;
 using Middleware.Controller;
 using Middleware.Model;
+using Middleware.Model.AMR;
+using Middleware.DataHolder;
 using Middleware.Fundamental;
 
 namespace Middleware
@@ -39,7 +42,7 @@ namespace Middleware
                 {
                     selectedConfig = modeConfiguration;
                     services.AddSingleton<ModeConfiguration>(selectedConfig);
-                    
+
                 }
             }
             if (selectedConfig.EndpointType == "TCP")
@@ -48,11 +51,21 @@ namespace Middleware
                 services.AddSingleton<TCP>(tcp);
                 services.AddSingleton<TaskSyncService>();
                 services.AddHostedService<TCPServerService>();
-                
+
+            }
+            else if (selectedConfig.EndpointType == "API")
+            {
+                AMRTaskMapping.amrTaskMapping = JsonSerializer.Deserialize<Dictionary<string, TaskMapping>>(File.ReadAllText("AGVTaskList.json"));
+                services.AddHostedService<AMRServerService>();
+            }
+            else
+            {
+                services.AddHostedService<AMRServerService>();
             }
             BLLServer.SetBaseAddress(selectedConfig.MESIP, selectedConfig.MESPort);
             BLLServer.SetBearerToken(selectedConfig.MESToken);
-            BLLServer.SetTimeOut(Configuration.GetValue<int>("RequestTimeOut"));
+            BLLServer.SetMESTimeOut(selectedConfig.MESRequestTimeOut);
+            BLLServer.setDeviceAddress(selectedConfig.DeviceIp, selectedConfig.DevicePort, "api/fexa/");
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {
