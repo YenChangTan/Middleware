@@ -12,10 +12,8 @@ namespace Middleware.Model
         public string RobotName { get; set; }
         public string EndpointType { get; set; }  // OPC, TCP, NA
         public string EndpointRole { get; set; }  // Server, Client, NA
-        public string ClientIP { get; set; }
-        public int ClientPort { get; set; }
-        public string ServerIP { get; set; }
-        public int ServerPort { get; set; }
+        public List<Network> Clients { get; set; }
+        public List<Network> Server {  get; set; }
         public string MESIP {  get; set; }
         public int MESPort { get; set; }
         public string MESToken { get; set; }

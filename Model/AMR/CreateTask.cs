@@ -9,5 +9,10 @@ namespace Middleware.Model.AMR
     public class CreateTask
     {
         public CreateTaskData data { get; set; }
+
+        public CreateTask()
+        {
+            data = new CreateTaskData();
+        }
     }
 }

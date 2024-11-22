@@ -15,5 +15,10 @@ namespace Middleware.Model.AMR
         public int sort {  get; set; }
         public List<TaskInfo> task {  get; set; }
 
+        public CreateTaskData()
+        {
+            task = new List<TaskInfo>();
+        }
+
     }
 }

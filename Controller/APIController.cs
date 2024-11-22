@@ -31,7 +31,7 @@ namespace Middleware.Controller
             _tcp = tcp;
         }
 
-        [HttpPost("workflow")]
+        [HttpPost("Workflow")]
         public async Task<IActionResult> DoWork()
         {
             using (StreamReader reader = new StreamReader(Request.Body))
@@ -43,7 +43,7 @@ namespace Middleware.Controller
                     MachineStatusUpdate machineStatusUpdate = JsonConvert.DeserializeObject<MachineStatusUpdate>(requestBody);
                     if (machineStatusUpdate.TaskName == "Recipe")
                     {
-                        for (int i = 0; i<5 & !_tcp.ConnectTcp(_modeConfiguration.ServerIP, _modeConfiguration.ServerPort.ToString()) ; i++)
+                        for (int i = 0; i<5 & !_tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().Port.ToString()) ; i++)
                         {
                             if (i == 4)
                             {

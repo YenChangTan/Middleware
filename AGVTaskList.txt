@@ -1,0 +1,292 @@
+﻿{
+  "1": { //move Epson to station 1.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "2": { //move station 1 Robco to station 1.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "3": { //move station 4 Robco to station 4.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "4": { //move lasermark machine to station 4.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "5": { //move station 2 Robco to station 2.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "6": { //move Scara to station 3.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+
+  //Moving robot to IFM Assembly Line
+  "7": { //move Epson to Line 2 station 1.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "8": { //move station 1 Robco to Line 2 station 1.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "9": { //move station 4 Robco to Line 2 station 4.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "10": { //move lasermark machine to Line 2 station 4
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "11": { //move station 4 Robco to Line 2 Station 4.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "12": { //AGV go to warehouse
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "13": { //AGV go to magazine loader
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "14": { //AGV load at warehouse
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "15": { //AGV unload at warehouse
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "16": { //AGV load at magazine loader
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "17": { //AGV unload at magazineloader
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  },
+  "18": { //AGV go to starting point for magazine loader there.
+    "name": "",
+    "deviceId": "",
+    "orderId": "",
+    "subtaskInfos": [
+      {
+        "type": "",
+        "name": ""
+      },
+      {
+        "type": "",
+        "thingsId": ""
+      }
+    ],
+    "thingsId": ""
+  }
+}

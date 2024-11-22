@@ -11,6 +11,7 @@ namespace Middleware.Model
         public string TaskName { get; set; }
         public string Recipe {  get; set; }
         public string PanelBarcode { get; set; }
+        public string PCBBarcode { get; set; }
         public DateTime InTime { get; set; }
         public DateTime OutTime { get; set; }
         public string MachineStatus { get; set; }

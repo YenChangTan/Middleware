@@ -8,6 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using Middleware.DataHolder;
+using Microsoft.Extensions.Logging;
 
 namespace Middleware.Controller
 {
@@ -152,19 +153,20 @@ namespace Middleware.Controller
             }
         }
 
-        public async Task<int> UpdateMagazineReport(string machineName, string LoaderReport)//Magazine Loader
+        public async Task<int> UpdateMagazineTimeStamp(DateTime dateTime)
         {
             string urlEndpoint = $"{baseAddress}api/Workflow";
             MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
             try
             {
-                machineStatusUpdate.TaskName = machineName;
-                machineStatusUpdate.RawData = LoaderReport;
+                machineStatusUpdate.TaskName = "Magazine Loader";
+                machineStatusUpdate.InTime = dateTime;
                 string jsonData = JsonConvert.SerializeObject(machineStatusUpdate);
                 var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await MESClient.PostAsync(urlEndpoint, content);
                 if (!response.IsSuccessStatusCode)
                 {
+                    Logger.LogMessage($"api request fail {response.StatusCode}", "error");
                     return 0; //request fail, data corrupted.
                 }
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -176,12 +178,51 @@ namespace Middleware.Controller
                 }
                 else
                 {
+                    Logger.LogMessage("api request fail", "error");
                     return 0; //Not sure how to define this scenario, update unsuccessfully?
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Logger.LogMessage(ex.ToString(), "error");
+                return 0;
+            }
+        }
+
+        public async Task<int> UpdateMagazineReport(string LoaderReport)//Magazine Loader
+        {
+            string urlEndpoint = $"{baseAddress}api/Workflow";
+            MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
+            try
+            {
+                machineStatusUpdate.TaskName = "Magazine Loader";
+                machineStatusUpdate.MachineStatus = "Report";
+                machineStatusUpdate.RawData = LoaderReport;
+                string jsonData = JsonConvert.SerializeObject(machineStatusUpdate);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await MESClient.PostAsync(urlEndpoint, content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    Logger.LogMessage("update report fail", "error");
+                    return 0; //request fail, data corrupted.
+                }
+                string responseBody = await response.Content.ReadAsStringAsync();
+                MachineStatusUpdateResult machineStatusUpdateResult = new MachineStatusUpdateResult();
+                machineStatusUpdateResult = JsonConvert.DeserializeObject<MachineStatusUpdateResult>(responseBody);
+                if (machineStatusUpdateResult.HasResult)
+                {
+                    Logger.LogMessage("update report successfully", "api");
+                    return 1;
+                }
+                else
+                {
+                    Logger.LogMessage("update report fail", "error");
+                    return 0; //Not sure how to define this scenario, update unsuccessfully?
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogMessage($"update report fail {ex.ToString()}", "error");
                 return 0;//request fail, data corrupted.
             }
         }
@@ -220,7 +261,7 @@ namespace Middleware.Controller
                     TaskDetailsForMES taskDetailsForMES = new TaskDetailsForMES()
                     {
                         taskId = createTaskReturn.content.taskId,
-                        orderId = createTaskReturn.content.orderId,
+                        orderId = createTaskReturn.content.orderId
                     };
                     AMRTaskList.taskDetailsForMEs.Add(taskDetailsForMES);
                 }

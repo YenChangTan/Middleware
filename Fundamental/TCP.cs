@@ -15,6 +15,7 @@ namespace Middleware.Fundamental
 
         public int RecipeId = 0; //recipe id
         public string SentString;
+        public string ReceivedString;
 
         public class PCBResult
         {
@@ -96,6 +97,79 @@ namespace Middleware.Fundamental
             catch (Exception e)
             {
                 return 3;//unexpected error.
+            }
+        }
+
+        public async Task<string> ReceiveString()
+        {
+            byte[] buffer = new byte[10];
+            
+            int bytesRead = await sock.ReceiveAsync(buffer);
+            Console.WriteLine(ByteArrayToHex(buffer));
+            return Encoding.ASCII.GetString(buffer, 0, bytesRead);
+        }
+
+        public async Task<int> ReceiveFromMagazineLoader()
+        {
+            try
+            {
+                byte[] buffer = new byte[1024];
+                int bytesRead = await sock.ReceiveAsync(buffer);
+                Logger.LogMessage(ByteArrayToHex(buffer), "tcp");
+                if (Encoding.ASCII.GetString(buffer, 0, bytesRead).Contains("11"))
+                {
+                    //try
+                    //{
+                    //    var receiveTask = Task.Run(async () =>
+                    //    {
+                    //        for (int i = 0; i < 5; i++)
+                    //        {
+                    //            buffer = new byte[50];
+                    //            bytesRead = await sock.ReceiveAsync(buffer);
+                    //        }
+                    //    });
+                    //    var timeOutTask = await Task.WhenAny(receiveTask, Task.Delay(200));
+                    //    return 1;
+                    //}
+                    //catch
+                    //{
+                    //    return 1;
+                    //}
+                    return 1;
+                }
+                else if (Encoding.ASCII.GetString(buffer, 0, bytesRead).Contains("GJ"))
+                {
+                    //try
+                    //{
+                    //    var receiveTask = Task.Run(async () =>
+                    //    {
+                    //        for (int i = 0; i < 5; i++)
+                    //        {
+                    //            buffer = new byte[50];
+                    //            bytesRead = await sock.ReceiveAsync(buffer);
+                    //        }
+                    //    });
+                    //    var timeOutTask = await Task.WhenAny(receiveTask, Task.Delay(200));
+                    //    return 2;
+                    //}
+                    //catch
+                    //{
+                    //    return 2;
+                    //}
+                    return 2;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch(SocketException ex)
+            {
+                return 3;
+            }
+            catch(Exception ex)
+            {
+                return 0;
             }
         }
 

@@ -41,3 +41,4 @@ C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middle
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\obj\Debug\net8.0\Middleware.genruntimeconfig.cache
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\obj\Debug\net8.0\ref\Middleware.dll
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\appsetting.json
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\AGVTaskList.json

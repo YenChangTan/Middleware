@@ -1,0 +1,18 @@
+{
+  "1": {
+    "name": "testing",
+    "deviceId": "123",
+    "orderId": "1",
+    "subtaskInfos": [
+      {
+        "type": "route",
+        "name": "1"
+      },
+      {
+        "type": "unload",
+        "thingsId": "1"
+      }
+    ],
+    "thingsId": "7"
+  }
+}

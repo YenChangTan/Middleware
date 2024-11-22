@@ -42,21 +42,28 @@ namespace Middleware
                 {
                     selectedConfig = modeConfiguration;
                     services.AddSingleton<ModeConfiguration>(selectedConfig);
+                    services.AddSingleton<TCP>();
 
                 }
             }
+            services.AddSingleton<TaskSyncService>();
             if (selectedConfig.EndpointType == "TCP")
             {
-                TCP tcp = new TCP();
-                services.AddSingleton<TCP>(tcp);
-                services.AddSingleton<TaskSyncService>();
                 services.AddHostedService<TCPServerService>();
 
+            }
+            else if (selectedConfig.EndpointType == "TCPClient")
+            {
+                services.AddHostedService<TCPClientService>();
             }
             else if (selectedConfig.EndpointType == "API")
             {
                 AMRTaskMapping.amrTaskMapping = JsonSerializer.Deserialize<Dictionary<string, TaskMapping>>(File.ReadAllText("AGVTaskList.json"));
                 services.AddHostedService<AMRServerService>();
+            }
+            else if (selectedConfig.EndpointType == "Magazine")
+            {
+                services.AddHostedService<MagazineLoaderService>();
             }
             else
             {

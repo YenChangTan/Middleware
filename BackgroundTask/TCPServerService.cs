@@ -13,6 +13,7 @@ using Middleware.Controller;
 using Middleware.DataHolder;
 using Newtonsoft.Json;
 using System.Text.Json.Nodes;
+using Middleware.Fundamental;
 //using System.BigChangus.Lib;
 namespace Middleware.BackgroundTask
 {
@@ -28,7 +29,11 @@ namespace Middleware.BackgroundTask
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            await TCPServer(_modeConfiguration.ClientIP, _modeConfiguration.ClientPort);
+            if (_modeConfiguration.Clients.Count() > 1)
+            {
+                _ = GetTrayBarcode(_modeConfiguration.Clients[1]);
+            }
+            await TCPServer(_modeConfiguration.Clients.First().IP, _modeConfiguration.Clients[1].Port);
         }
 
         public bool StartRunEndPointExe(string taskName)
@@ -42,6 +47,48 @@ namespace Middleware.BackgroundTask
             {
                 Console.WriteLine(ex.Message);
                 return false;
+            }
+        }
+
+        public async Task GetTrayBarcode(Network network)
+        {
+            BLLServer server = new BLLServer();
+            int resultCode = 0;
+            TCP _tcp = new TCP();
+            while (true)
+            {
+                try
+                {
+                    while (!_tcp.ConnectTcp(network.IP, network.Port.ToString()))
+                    {
+                        await Task.Delay(5000);
+                    }
+
+                    while (true)
+                    {
+                        while (true)
+                        {
+                            try
+                            {
+
+                                string TrayBarcodeInfo = await _tcp.ReceiveString();
+                                TrayNPCBData.trayNPCB.TrayID = TrayBarcodeInfo;
+                                //need to update the read barcode.
+                                TrayNPCBData.trayNPCB.PCBIDs = new List<string>();
+                            }
+                            catch
+                            {
+                                break;
+                            }
+
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
             }
         }
 
@@ -60,18 +107,15 @@ namespace Middleware.BackgroundTask
                 {
                     TcpClient client = await listener.AcceptTcpClientAsync();
                     lock (clients) clients.Add(client);
-                    if (_modeConfiguration.ModeId == "1")
-                    {
-                        _ = HandleClient1(client);
-                    }
-                    else if (_modeConfiguration.ModeId == "4")
-                    {
-                        _ = HandleClient2(client);
-                    }
-                    else
-                    {
-                        break;
-                    }
+                    //if (_modeConfiguration.ModeId == "1")
+                    //{
+                    //    _ = HandleClient1(client);
+                    //}
+                    //else
+                    //{
+                    //    _ = HandleClient2(client);
+                    //}
+                    _ = HandleClient2(client);
                     
                 }
                 catch (Exception ex)
@@ -81,111 +125,114 @@ namespace Middleware.BackgroundTask
             }
         }
 
-        public async Task HandleClient1(TcpClient client)//this function handle the client side from ah teoh the magazine loader before the smt line.
-        {
-            using (client)
-            {
-                NetworkStream stream = client.GetStream();
-                BLLServer server = new BLLServer();
-                int DataLength = 4;
-                byte[] buffer = new byte[1024];
-                byte[] bytesToSend = new byte[DataLength];
-                byte[] receiveBytes = new byte[DataLength];
-                try
-                {
-                    while (true)
-                    {
-                        buffer = new byte[1024];
-                        bytesToSend = new byte[DataLength];
-                        receiveBytes = new byte[DataLength];
-                        int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
-                        if (bytesRead == 0)
-                        {
-                            break;
-                        }
-                        if (bytesRead == 4)
-                        {
-                            if (Encoding.ASCII.GetString(buffer,0,4) == "DNDN")
-                            {
-                                int updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "EMPTY");
-                                if (updateMachineStatusResult == 0)
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                                }
-                                else
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("DNDN"));
-                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
-                                    if (completedTask == _taskSyncService.ProceedTaskSource.Task)
-                                    {
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
-                                    }
-                                    else
-                                    {
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                                    }
-                                }
-                            }
-                            else if (Encoding.ASCII.GetString(buffer,0,4) == "UPUP")
-                            {
-                                MagazineCounter = !MagazineCounter;
-                                if (MagazineCounter)
-                                {
-                                    LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
+        //public async Task HandleClient1(TcpClient client)//this function handle the client side from ah teoh the magazine loader before the smt line.
+        //{
+        //    using (client)
+        //    {
+        //        NetworkStream stream = client.GetStream();
+        //        BLLServer server = new BLLServer();
+        //        int DataLength = 4;
+        //        byte[] buffer = new byte[1024];
+        //        byte[] bytesToSend = new byte[DataLength];
+        //        byte[] receiveBytes = new byte[DataLength];
+        //        try
+        //        {
+        //            while (true)
+        //            {
+        //                buffer = new byte[1024];
+        //                bytesToSend = new byte[DataLength];
+        //                receiveBytes = new byte[DataLength];
+        //                int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+        //                if (bytesRead == 0)
+        //                {
+        //                    break;
+        //                }
+        //                if (bytesRead == 4)
+        //                {
+        //                    if (Encoding.ASCII.GetString(buffer,0,4) == "DNDN")
+        //                    {
+        //                        int updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "EMPTY");
+        //                        if (updateMachineStatusResult == 0)
+        //                        {
+        //                            await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+        //                        }
+        //                        else
+        //                        {
+        //                            await stream.WriteAsync(Encoding.ASCII.GetBytes("DNDN"));
+        //                            var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
+        //                            if (completedTask == _taskSyncService.ProceedTaskSource.Task)
+        //                            {
+        //                                await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
+        //                            }
+        //                            else
+        //                            {
+        //                                await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+        //                            }
+        //                        }
+        //                    }
+        //                    else if (Encoding.ASCII.GetString(buffer,0,4) == "UPUP")
+        //                    {
+        //                        MagazineCounter = !MagazineCounter;
+        //                        if (MagazineCounter)
+        //                        {
+        //                            LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
                                     
-                                }
-                                else
-                                {
-                                    LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
+        //                        }
+        //                        else
+        //                        {
+        //                            LoaderReportData.loaderReport.MagazineId = "SIPMGZ002";
                                     
-                                }
-                                if (LoaderReportData.loaderReport.TimeStamp != null && LoaderReportData.loaderReport.TimeStamp.Any())
-                                {
-                                    LoaderReportData.loaderReport.StartTime = LoaderReportData.loaderReport.TimeStamp.First();
-                                    LoaderReportData.loaderReport.EndTime = LoaderReportData.loaderReport.TimeStamp.Last();
-                                }
-                                int updateMagazineLoaderResult = await server.UpdateMagazineReport(_modeConfiguration.RobotName, JsonConvert.SerializeObject(LoaderReportData.loaderReport));
-                                int updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "FULL");
-                                if (updateMachineStatusResult == 0)
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                                }
-                                else
-                                {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("UPUP"));
-                                    LoaderReportData.loaderReport = new LoaderReport();
-                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
-                                    if (completedTask == _taskSyncService.ProceedTaskSource.Task)
-                                    {
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
-                                    }
-                                    else
-                                    {
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                                    }
-                                }
-                            }
-                            else if (Encoding.ASCII.GetString(buffer,0,3) == "OUT")
-                            {
-                                LoaderReportData.loaderReport.TimeStamp.Add(DateTime.Now);
-                            }
-                            else
-                            {
-                                await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                            }
-                        }
-                        else
-                        {
-                            await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }
-        }
+        //                        }
+        //                        if (LoaderReportData.loaderReport.TimeStamp != null && LoaderReportData.loaderReport.TimeStamp.Any())
+        //                        {
+        //                            LoaderReportData.loaderReport.StartTime = LoaderReportData.loaderReport.TimeStamp.First();
+        //                            LoaderReportData.loaderReport.EndTime = LoaderReportData.loaderReport.TimeStamp.Last();
+        //                        }
+        //                        Console.WriteLine(JsonConvert.SerializeObject(LoaderReportData.loaderReport));
+        //                        int updateMagazineLoaderResult = await server.UpdateMagazineReport(JsonConvert.SerializeObject(LoaderReportData.loaderReport));
+        //                        if (updateMagazineLoaderResult == 0)
+        //                        {
+        //                            await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+        //                        }
+        //                        else
+        //                        {
+        //                            //await stream.WriteAsync(Encoding.ASCII.GetBytes("UPUP"));
+        //                            //LoaderReportData.loaderReport = new LoaderReport();
+        //                            //var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
+        //                            //if (completedTask == _taskSyncService.ProceedTaskSource.Task)
+        //                            //{
+        //                            //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
+        //                            //}
+        //                            //else
+        //                            //{
+        //                            //    await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+        //                            //}
+        //                            await stream.WriteAsync(Encoding.ASCII.GetBytes("DONE"));
+        //                        }
+        //                    }
+        //                    else if (Encoding.ASCII.GetString(buffer,0,3) == "OUT")
+        //                    {
+        //                        LoaderReportData.loaderReport.TimeStamp.Add(DateTime.Now);
+        //                        Array.Copy(buffer, bytesToSend,4);
+        //                        await stream.WriteAsync(bytesToSend);
+        //                    }
+        //                    else
+        //                    {
+        //                        await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    await stream.WriteAsync(Encoding.ASCII.GetBytes("FAIL"));
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Console.WriteLine(ex.ToString());
+        //        }
+        //    }
+        //}
 
         public async Task HandleClient2(TcpClient client)//this function handle client side from Epson at station 1.
         {
@@ -223,49 +270,59 @@ namespace Middleware.BackgroundTask
                             //}
                             if (Encoding.ASCII.GetString(buffer, 0, DataLength-1) == "STATUS")
                             {
+
+                                string Status = null;
                                 int updateMachineStatusResult;
+                                Array.Copy(buffer, byteToSend, DataLength);
+                                await stream.WriteAsync(byteToSend);
                                 switch (buffer[DataLength - 1])
                                 {
                                     case (byte)'0'://Free
+                                        Status = "Free";
                                         updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Free");
-                                        if (updateMachineStatusResult == 1)
-                                        {
-                                            Array.Copy(buffer, byteToSend, DataLength);
-                                            await stream.WriteAsync(byteToSend);
-                                        }
-                                        else // == 0
-                                        {
-                                            await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
-                                        }
+                                        //if (updateMachineStatusResult == 1)
+                                        //{
+                                        //    Array.Copy(buffer, byteToSend, DataLength);
+                                        //    await stream.WriteAsync(byteToSend);
+                                        //}
+                                        //else // == 0
+                                        //{
+                                        //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        //}
                                         break;
                                     case (byte)'1'://Busy
-                                        updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Busy");
-                                        if (updateMachineStatusResult == 1)
-                                        {
-                                            Array.Copy(buffer, byteToSend, DataLength);
-                                            await stream.WriteAsync(byteToSend);
-                                        }
-                                        else // == 0
-                                        {
-                                            await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
-                                        }
-                                        break;
-                                    case (byte)'2'://Error
-                                        updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Error");
-                                        if (updateMachineStatusResult == 1)
-                                        {
-                                            Array.Copy(buffer, byteToSend, DataLength);
-                                            await stream.WriteAsync(byteToSend);
-                                        }
-                                        else // == 0
-                                        {
-                                            await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
-                                        }
+                                        Status = "Busy";
+                                        //updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Busy");
+                                        //if (updateMachineStatusResult == 1)
+                                        //{
+                                        //    Array.Copy(buffer, byteToSend, DataLength);
+                                        //    await stream.WriteAsync(byteToSend);
+                                        //}
+                                        //else // == 0
+                                        //{
+                                        //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        //}
                                         break;
                                     default:
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        Status = "Error";
+                                        //updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Error");
+                                        //if (updateMachineStatusResult == 1)
+                                        //{
+                                        //    Array.Copy(buffer, byteToSend, DataLength);
+                                        //    await stream.WriteAsync(byteToSend);
+                                        //}
+                                        //else // == 0
+                                        //{
+                                        //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        //}
                                         break;
                                 }
+                                _ = Task.Run(async()=>
+                                {
+                                    for (int i = 0; i < 5 & (await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Free")) != 1; i++)
+                                    {
+                                    }
+                                });
                             }
                             else if (Encoding.ASCII.GetString(buffer,0, DataLength) == "DOLASER")
                             {
@@ -309,7 +366,10 @@ namespace Middleware.BackgroundTask
                             if (bytesRead == 10 & Encoding.ASCII.GetString(buffer, 0, 6) == "SIPBTS")
                             {
                                 pcbBarcode = Encoding.ASCII.GetString(buffer, 0, 10);
-                                int pcbStatusResult = await server.GetPCBStatus(pcbBarcode);
+                                int pcbStatusResult = 3;
+                                for (int i = 0; i<5 & (pcbStatusResult = await server.GetPCBStatus(pcbBarcode)) == 3; i++)
+                                {
+                                }
                                 switch (pcbStatusResult)
                                 {
                                     case 0://pcb is under good condition.
@@ -321,20 +381,20 @@ namespace Middleware.BackgroundTask
                                         Array.Copy(Encoding.ASCII.GetBytes("STATUS"), bytesToSendWithoutCRC, 6);
                                         bytesToSendWithoutCRC[DataLength - 1] = (byte)'1';
                                         await stream.WriteAsync(bytesToSendWithoutCRC);
+                                        TrayNPCBData.trayNPCB.PCBIDs.Add(pcbBarcode);
                                         break;
-                                    case 2: //pcb not found.
+                                    default: //pcb not found or data error.
                                         Array.Copy(Encoding.ASCII.GetBytes("STATUS"), bytesToSendWithoutCRC, 6);
                                         bytesToSendWithoutCRC[DataLength - 1] = (byte)'2';
                                         await stream.WriteAsync(bytesToSendWithoutCRC);
-                                        break;
-                                    default://consider as data corrupted.
-                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
                                         break;
                                 }
                             }
                             else
                             {
-                                await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                Array.Copy(Encoding.ASCII.GetBytes("STATUS"), bytesToSendWithoutCRC, 6);
+                                bytesToSendWithoutCRC[DataLength - 1] = (byte)'2';
+                                await stream.WriteAsync(bytesToSendWithoutCRC);
                             }
                         }
                     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -18,7 +19,7 @@ using Middleware.DataHolder;
 namespace Middleware.Controller
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api")]
     public class WorkflowController: ControllerBase
     {
         public ModeConfiguration _modeConfiguration {  get; set; }
@@ -31,7 +32,7 @@ namespace Middleware.Controller
             _tcp = tcp;
         }
 
-        [HttpPost("workflow")]
+        [HttpPost("Workflow")]
         public async Task<IActionResult> DoWork()
         {
             using (StreamReader reader = new StreamReader(Request.Body))
@@ -40,10 +41,10 @@ namespace Middleware.Controller
                 try
                 {
                     string requestBody = await reader.ReadToEndAsync();
-                    MachineStatusUpdate machineStatusUpdate = JsonConvert.DeserializeObject<MachineStatusUpdate>(requestBody);
-                    if (machineStatusUpdate.TaskName == "Recipe")
+                    MESPost mesPost = JsonConvert.DeserializeObject<MESPost>(requestBody);
+                    if (mesPost.TaskID == "Recipe")
                     {
-                        for (int i = 0; i<5 & !_tcp.ConnectTcp(_modeConfiguration.ServerIP, _modeConfiguration.ServerPort.ToString()) ; i++)
+                        for (int i = 0; i<5 & !_tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().IP.ToString()) ; i++)
                         {
                             if (i == 4)
                             {
@@ -53,7 +54,7 @@ namespace Middleware.Controller
                             }
                             await Task.Delay(1000);
                         }
-                        if (machineStatusUpdate.Recipe == "1")
+                        if (mesPost.Recipe == "1")
                         {
                             int resultCode = 0;
                             for (int i = 0 ; i<5 & (resultCode = _tcp.SendRecipe(1)) != 1; i++)
@@ -68,7 +69,7 @@ namespace Middleware.Controller
                             return Ok(result);
 
                         }
-                        else if (machineStatusUpdate.Recipe == "2")
+                        else if (mesPost.Recipe == "2")
                         {
                             int resultCode = 0;
                             for (int i = 0; i < 5 | (resultCode = _tcp.SendRecipe(2)) != 1; i++)
@@ -89,7 +90,7 @@ namespace Middleware.Controller
                             return Ok(result);
                         }
                     }
-                    else if (machineStatusUpdate.TaskName == "Proceed")
+                    else if (mesPost.TaskID == "Proceed")
                     {
                         try
                         {
@@ -102,15 +103,16 @@ namespace Middleware.Controller
                         result.HasResult = true;
                         return Ok(result);
                     }
-                    else if (machineStatusUpdate.TaskName == "AGV")
+                    else if (mesPost.TaskID == "AGV")
                     {
                         CreateTask createTask = new CreateTask();
                         bool isFound = false;
                         foreach (var taskMapping in AMRTaskMapping.amrTaskMapping)
                         {
-                            if (machineStatusUpdate.Recipe == taskMapping.Key)
+                            if (mesPost.Recipe == taskMapping.Key)
                             {
                                 createTask.data.deviceId = taskMapping.Value.deviceId;
+
                                 createTask.data.orderId = taskMapping.Key;
                                 foreach (var subtask in taskMapping.Value.subtaskInfos)
                                 {
@@ -144,7 +146,7 @@ namespace Middleware.Controller
                         }
                         if (!isFound)
                         {
-                            result.HasResult = true;
+                            result.HasResult = false;
                             result.Message = "TaskId not found";
                             return Ok(result);
                         }

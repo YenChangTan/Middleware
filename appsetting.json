@@ -1,19 +1,27 @@
 {
-  "SelectedModeId": "4",
+  "SelectedModeId": "1",
   "ApplicationUrl": "http://0.0.0.0:4847",
   "ModeConfigurations": [
     {
       "ModeId": "1",
       "RobotName": "Magazine Loader",
       "SelfAPIPort": "4862",
-      "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4863",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4864",
-      "MESIP": "192.168.3.108",
+      "EndpointType": "Magazine",
+      "Clients": [
+        {
+          "IP": "192.168.1.200",
+          "Port": "123"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "192.168.1.200",
+          "Port": "123"
+        }
+      ],
+      "MESIP": "192.168.1.188",
       "MESPort": "82",
-      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESToken": "1GmoRf8g5ocanZ6X2KyvePuUZVk9oIaF3n5MKMreA5ZP1isCj+e6SOeeEb4TcsPC",
       "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
     },
@@ -22,6 +30,18 @@
       "RobotName": "Robco 1",
       "SelfAPIPort": "4841",
       "EndpointType": "TCP",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4842"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4843"
+        }
+      ],
       "ClientIP": "127.0.0.1",
       "ClientPort": "4842",
       "ServerIP": "127.0.0.1",
@@ -126,8 +146,25 @@
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
-      "DeviceIp": "10.42.0.1",
-      "DevicePort": "30381",
+      "DeviceIp": "192.168.3.161",
+      "DevicePort": "8980",
+      "MESRequestTimeOut": "3000",
+      "TimeOut": "5000"
+    },
+    {
+      "ModeId": "10",
+      "RobotName": "Camera",
+      "SelfAPIPort": "4862",
+      "EndpointType": "TCPClient",
+      "ServerIP": "192.168.1.200",
+      "ServerPort": "123",
+      "ClientIP": "127.0.0.1",
+      "ClientPort": "4860",
+      "MESIP": "192.168.3.111",
+      "MESPort": "82",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "DeviceIp": "192.168.3.161",
+      "DevicePort": "8980",
       "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
     }
