@@ -29,16 +29,6 @@ namespace Middleware.Fundamental
         {
             try
             {
-                using (Socket testSock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
-                {
-                    var result = testSock.BeginConnect(IP, Convert.ToInt32(Port.Trim()), null, null);
-                    var success = result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(1));
-                    if (!success | !testSock.Connected)
-                    {
-                        return false;
-                    }
-                    testSock.EndConnect(result);
-                }
                 sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 sock.Connect(IPAddress.Parse(IP), Convert.ToInt32(Port.Trim()));
                 return true;
@@ -60,8 +50,11 @@ namespace Middleware.Fundamental
                 {
                     return resultCode;
                 }
-                resultCode = Receive();
-                return resultCode;
+                else
+                {
+                    resultCode = Receive();
+                    return resultCode;
+                }
             }
             catch
             {
@@ -81,8 +74,11 @@ namespace Middleware.Fundamental
                     Array.Copy(Encoding.ASCII.GetBytes(command), bytesToSendWithoutCRC, DataLength - 1);
                     bytesToSendWithoutCRC[DataLength - 1] = (byte)( RecipeId + '0');
                     RecipeId = 0;
-                    sock.Send(bytesToSendWithoutCRC);
+                    bytesToSendWithoutCRC = new byte[7] { 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37 };
+                    int bytesSent = sock.Send(bytesToSendWithoutCRC);
+                    Console.WriteLine(bytesSent);
                     SentString = Encoding.ASCII.GetString(bytesToSendWithoutCRC);
+                    Console.WriteLine(SentString);
                     return 1;//success
                 }
                 else
@@ -116,47 +112,58 @@ namespace Middleware.Fundamental
                 byte[] buffer = new byte[1024];
                 int bytesRead = await sock.ReceiveAsync(buffer);
                 Logger.LogMessage(ByteArrayToHex(buffer), "tcp");
+                var cts = new CancellationTokenSource();
+                CancellationToken token = cts.Token;
                 if (Encoding.ASCII.GetString(buffer, 0, bytesRead).Contains("11"))
                 {
-                    //try
-                    //{
-                    //    var receiveTask = Task.Run(async () =>
-                    //    {
-                    //        for (int i = 0; i < 5; i++)
-                    //        {
-                    //            buffer = new byte[50];
-                    //            bytesRead = await sock.ReceiveAsync(buffer);
-                    //        }
-                    //    });
-                    //    var timeOutTask = await Task.WhenAny(receiveTask, Task.Delay(200));
-                    //    return 1;
-                    //}
-                    //catch
-                    //{
-                    //    return 1;
-                    //}
+                    var receiveTask = Task.Run(async () =>
+                    {
+                        try
+                        {
+                            for (int i = 0; i < 3; i++)
+                            {
+                                token.ThrowIfCancellationRequested();
+                                buffer = new byte[50];
+                                bytesRead = await sock.ReceiveAsync(buffer);
+                            }
+                        }
+                        catch (OperationCanceledException)
+                        {
+                        }
+                    });
+                    var timeOutTask = await Task.WhenAny(receiveTask, Task.Delay(200));
+                    cts.Cancel();
                     return 1;
                 }
                 else if (Encoding.ASCII.GetString(buffer, 0, bytesRead).Contains("GJ"))
                 {
-                    //try
-                    //{
-                    //    var receiveTask = Task.Run(async () =>
-                    //    {
-                    //        for (int i = 0; i < 5; i++)
-                    //        {
-                    //            buffer = new byte[50];
-                    //            bytesRead = await sock.ReceiveAsync(buffer);
-                    //        }
-                    //    });
-                    //    var timeOutTask = await Task.WhenAny(receiveTask, Task.Delay(200));
-                    //    return 2;
-                    //}
-                    //catch
-                    //{
-                    //    return 2;
-                    //}
-                    return 2;
+                    try
+                    {
+                        var receiveTask = Task.Run(async () =>
+                        {
+                            try
+                            {
+                                for (int i = 0; i < 5; i++)
+                                {
+                                    token.ThrowIfCancellationRequested();
+                                    buffer = new byte[50];
+                                    bytesRead = await sock.ReceiveAsync(buffer);
+                                }
+                            }
+                            catch (OperationCanceledException)
+                            {
+
+                            }
+                        });
+                        var timeOutTask = await Task.WhenAny(receiveTask, Task.Delay(200));
+                        cts.Cancel();
+                        return 2;
+                    }
+                    catch
+                    {
+                        return 2;
+                    }
+                    //return 2;
                 }
                 else
                 {

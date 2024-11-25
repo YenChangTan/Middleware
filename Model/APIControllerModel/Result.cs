@@ -10,5 +10,11 @@ namespace Middleware.Model.APIControllerModel
     {
         public bool HasResult { get; set; }
         public string Message { get; set; }
+
+        public Result()
+        {
+            HasResult = false;
+        }
     }
+    
 }

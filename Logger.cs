@@ -43,7 +43,7 @@ namespace Middleware
                 string logFilePath = Path.Combine(dayFolder, logFileName);
 
                 // Write log data
-                File.AppendAllText(logFilePath, $"{DateTime.Now:mm:ss.fff} {message}\n");
+                File.AppendAllText(logFilePath, $"{DateTime.Now:HH:mm:ss.fff} {message}\n");
 
 
                 // Run folder cleanup for outdated folders

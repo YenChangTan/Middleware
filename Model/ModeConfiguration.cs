@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Middleware.Model.OPC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,6 @@ namespace Middleware.Model
         public string ModeId { get; set; }
         public string RobotName { get; set; }
         public string EndpointType { get; set; }  // OPC, TCP, NA
-        public string EndpointRole { get; set; }  // Server, Client, NA
         public List<Network> Clients { get; set; }
         public List<Network> Server {  get; set; }
         public string MESIP {  get; set; }
@@ -21,6 +21,7 @@ namespace Middleware.Model
         public int DevicePort { get; set; }
         public int MESRequestTimeOut { get; set; }
         public int TimeOut { get; set; }
+        public List<OPCdriver> OPC {  get; set; }
 
         // Optional: for OPC-related settings
         //public Dictionary<string, string> OpcNodeIds { get; set; }

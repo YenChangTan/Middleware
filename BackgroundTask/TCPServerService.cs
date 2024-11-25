@@ -29,11 +29,12 @@ namespace Middleware.BackgroundTask
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            if (_modeConfiguration.Clients.Count() > 1)
-            {
-                _ = GetTrayBarcode(_modeConfiguration.Clients[1]);
-            }
-            await TCPServer(_modeConfiguration.Clients.First().IP, _modeConfiguration.Clients[1].Port);
+            //if (_modeConfiguration.Clients.Count() > 1)
+            //{
+            //    _ = GetTrayBarcode(_modeConfiguration.Clients[1]);
+            //}
+            _ = GetTrayBarcode(_modeConfiguration.Server[1]);
+            await TCPServer(_modeConfiguration.Clients.First().IP, _modeConfiguration.Clients.First().Port);
         }
 
         public bool StartRunEndPointExe(string taskName)
@@ -45,7 +46,7 @@ namespace Middleware.BackgroundTask
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Logger.LogMessage(ex.Message, "error");
                 return false;
             }
         }
@@ -73,21 +74,21 @@ namespace Middleware.BackgroundTask
 
                                 string TrayBarcodeInfo = await _tcp.ReceiveString();
                                 TrayNPCBData.trayNPCB.TrayID = TrayBarcodeInfo;
-                                //need to update the read barcode.
+                                MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
+                                machineStatusUpdate.TaskName = "TrayPCB";
+                                machineStatusUpdate.RawData = JsonConvert.SerializeObject(TrayNPCBData.trayNPCB);
                                 TrayNPCBData.trayNPCB.PCBIDs = new List<string>();
                             }
                             catch
                             {
                                 break;
                             }
-
-
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-
+                    Logger.LogMessage($"Error in TrayPCB : {ex.Message}", "error");
                 }
             }
         }
@@ -120,7 +121,7 @@ namespace Middleware.BackgroundTask
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    Logger.LogMessage($"Error in server flow : {ex.Message}", "error");
                 }
             }
         }
@@ -305,6 +306,7 @@ namespace Middleware.BackgroundTask
                                         break;
                                     default:
                                         Status = "Error";
+
                                         //updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Error");
                                         //if (updateMachineStatusResult == 1)
                                         //{
@@ -319,7 +321,7 @@ namespace Middleware.BackgroundTask
                                 }
                                 _ = Task.Run(async()=>
                                 {
-                                    for (int i = 0; i < 5 & (await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Free")) != 1; i++)
+                                    for (int i = 0; i < 5 & (await server.UpdateMachineStatus(_modeConfiguration.RobotName, Status)) != 1; i++)
                                     {
                                     }
                                 });
@@ -328,11 +330,22 @@ namespace Middleware.BackgroundTask
                             {
                                 Array.Copy(buffer, byteToSend, DataLength);
                                 await stream.WriteAsync(byteToSend);
+                                int updateMachineStatusResult = 0;
                                 //need to add update tho
-                                var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
-                                if (completedTask == _taskSyncService.ProceedTaskSource.Task)
+                                for (int i = 0; i < 5 & (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "can pick")) != 1; i++)
                                 {
-                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("TASKEND"));
+                                }
+                                if (updateMachineStatusResult == 1)
+                                {
+                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task, Task.Delay(_modeConfiguration.TimeOut));
+                                    if (completedTask == _taskSyncService.ProceedTaskSource.Task)
+                                    {
+                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("TASKEND"));
+                                    }
+                                    else
+                                    {
+                                        await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                    }
                                 }
                                 else
                                 {
@@ -343,10 +356,10 @@ namespace Middleware.BackgroundTask
                             {
                                 int updateMachineStatusResult;
                                 //need to add to update to MES, confirm JSON Body
-                                for (int i = 0; i < 5 & (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Busy")) != 1; i++)
+                                for (int i = 0; i < 5 & (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "can pick")) != 1; i++)
                                 {
                                 }
-                                if(updateMachineStatusResult == 1)
+                                if (updateMachineStatusResult == 1)
                                 {
                                     Array.Copy(buffer, byteToSend, DataLength);
                                     await stream.WriteAsync(byteToSend);

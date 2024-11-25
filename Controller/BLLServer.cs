@@ -269,6 +269,7 @@ namespace Middleware.Controller
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return 0;
             }
         }

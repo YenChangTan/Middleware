@@ -34,8 +34,7 @@ namespace Middleware.Fundamental
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("fail to load config");
+                Logger.LogMessage($"Error in LoadConfig : {ex.Message}", "error");
                 return new JresultModel { result = false, message = "Failed to load application configuration." };
             }
         }
@@ -88,7 +87,7 @@ namespace Middleware.Fundamental
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine($"Error creating session: {ex.Message}");
+                    Logger.LogMessage($"Error in Build Session for Connection : {ex.Message}", "error");
                     return new JresultModel { result = false, message = "Failed to create OPC UA session." };
                 }
 
@@ -97,8 +96,9 @@ namespace Middleware.Fundamental
 
                 return new JresultModel { result = true, message = "Connection successful." };
             }
-            catch
+            catch (Exception ex)
             {
+                Logger.LogMessage($"Error in Build Connection : {ex.Message}", "error");
                 return new JresultModel { result = false, message = "An unexpected error occurred." };
             }
         }
@@ -111,8 +111,9 @@ namespace Middleware.Fundamental
                 {
                     return CoreClientUtils.SelectEndpoint(endpointUrl, useSecurity);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Logger.LogMessage($"Error in Select OPC Endpoint : {ex.Message}", "error");
                     EndpointDescription description = new EndpointDescription();
                     return description;
                 }
@@ -154,16 +155,13 @@ namespace Middleware.Fundamental
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error now is {ex.Message}");
-                    if (ex.Message == "BadNotConnected" | ex.Message == "BadSecureChannelClosed" | ex.Message == "Object reference not set to an instance of an object.")
+                    Logger.LogMessage($"Error in Read OPC : {ex.Message}", "error");
+                    if (session != null)
                     {
-                        if (session != null)
-                        {
-                            session.Dispose();
-                            session.Close();
-                        }
-                        session = null;
+                        session.Dispose();
+                        session.Close();
                     }
+                    session = null;
                     DataValue dataValue = new DataValue();
                     dataValue.Value = new Variant(ex.Message);
                     dataValue.StatusCode = Opc.Ua.StatusCodes.Bad;
@@ -239,6 +237,7 @@ namespace Middleware.Fundamental
                 }
                 catch (Exception ex)
                 {
+                    Logger.LogMessage($"Error in Write OPC : {ex.Message}", "error");
                     return new JresultModel { result = false, message = $"Exception: {ex.Message}" };
                 }
             }

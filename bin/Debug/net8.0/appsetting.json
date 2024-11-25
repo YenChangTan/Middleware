@@ -1,6 +1,6 @@
 {
-  "SelectedModeId": "1",
-  "ApplicationUrl": "http://0.0.0.0:4847",
+  "SelectedModeId": "12",
+  "ApplicationUrl": "http://0.0.0.0:4859",
   "ModeConfigurations": [
     {
       "ModeId": "1",
@@ -42,10 +42,6 @@
           "Port": "4843"
         }
       ],
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4842",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4843",
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
@@ -56,10 +52,18 @@
       "RobotName": "Robco 2",
       "SelfAPIPort": "4844",
       "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4845",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4846",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4845"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4846"
+        }
+      ],
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
@@ -70,10 +74,18 @@
       "RobotName": "Conveyor Station 1",
       "SelfAPIPort": "4847",
       "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4848",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4849",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4848"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4849"
+        }
+      ],
       "MESIP": "192.168.3.108",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
@@ -84,10 +96,18 @@
       "RobotName": "Robco Station 1",
       "SelfAPIPort": "4850",
       "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4851",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4852",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4851"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4852"
+        }
+      ],
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
@@ -98,10 +118,18 @@
       "RobotName": "Robco Station 2",
       "SelfAPIPort": "4853",
       "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4854",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4855",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4854"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4855"
+        }
+      ],
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
@@ -112,10 +140,18 @@
       "RobotName": "Scara",
       "SelfAPIPort": "4856",
       "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4857",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4858",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4857"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4858"
+        }
+      ],
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
@@ -126,12 +162,20 @@
       "RobotName": "Robco Station 4",
       "SelfAPIPort": "4859",
       "EndpointType": "TCP",
-      "ClientIP": "127.0.0.1",
-      "ClientPort": "4860",
-      "ServerIP": "127.0.0.1",
-      "ServerPort": "4861",
-      "MESIP": "192.168.3.111",
-      "MESPort": "82",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4860"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4861"
+        }
+      ],
+      "MESIP": "192.168.3.161",
+      "MESPort": "8080",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
       "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
@@ -146,8 +190,8 @@
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
-      "DeviceIp": "192.168.3.161",
-      "DevicePort": "8980",
+      "DeviceIp": "192.168.1.110",
+      "DevicePort": "30381",
       "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
     },
@@ -167,6 +211,100 @@
       "DevicePort": "8980",
       "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
+    },
+    {
+      "ModeId": "11",
+      "RobotName": "OPCLine1",
+      "SelfAPIPort": "4862",
+      "EndpointType": "OPC",
+      "MESIP": "192.168.3.161",
+      "MESPort": "8080",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000",
+      "TimeOut": "5000",
+      "OPC": [
+        {
+          "ServerIP": "192.168.1.151",
+          "ServerPort": "4840",
+          "OPCName": "Conveyor Station 1",
+          "Recipe": "2",
+          "Token": "7xOHXzh/LT7IOVtm2BFy3/t2CtzV5o1w46pHcR6wwLIhKFOOjJDK1V7e7rl5tByo",
+          "NodeBase": "ns=4;s=|var|AX-304ELA0PA1T.Application."
+        },
+        {
+          "ServerIP": "192.168.1.152",
+          "ServerPort": "4840",
+          "OPCName": "Conveyor Station 2",
+          "Recipe": "1",
+          "Token": "4TNN3wwljZjC1q4Yw1qBnshGu49JwSRyRkdPdey5s0XSHBmm/zRwTn5HUn2VtDza",
+          "NodeBase": "ns=4;s=|var|AX-304ELA0PA1T.Application."
+        },
+        {
+          "ServerIP": "192.168.1.153",
+          "ServerPort": "4840",
+          "OPCName": "Conveyor Station 3",
+          "Recipe": "1",
+          "Token": "snEaUmPzAXfK7afv7ffBf8GXWCMPtPRGmFZVYdJZn7jKlNL4Qvyb6wtBD2nlg5pc",
+          "NodeBase": "ns=4;s=|var|AX-304ELA0PA1T.Application."
+        },
+        {
+          "ServerIP": "192.168.1.154",
+          "ServerPort": "4840",
+          "OPCName": "Conveyor Station 4",
+          "Recipe": "1",
+          "Token": "aLC2oybz/rNWiZJhvRRHpUeNlXGyf9YqeDvWpjkkVzR2w0jC/uHVCTLQtCm5BZsj",
+          "NodeBase": "ns=4;s=|var|AX-304ELA0PA1T.Application."
+        }
+      ]
+    },
+    {
+      "ModeId": "12",
+      "RobotName": "OPCLine2",
+      "SelfAPIPort": "4862",
+      "EndpointType": "OPC",
+      "Clients": [
+        {
+          "IP": "127.0.0.1",
+          "Port": "4860"
+        }
+      ],
+      "Server": [
+        {
+          "IP": "192.168.1.157",
+          "Port": "4840"
+        }
+      ],
+      "MESIP": "127.0.0.1",
+      "MESPort": "8080",
+      "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "MESRequestTimeOut": "3000",
+      "TimeOut": "5000",
+      "OPC": [
+        {
+          "ServerIP": "192.168.1.154",
+          "ServerPort": "4840",
+          "OPCName": "IFM 1",
+          "Recipe": "1",
+          "Token": "aLC2oybz/rNWiZJhvRRHpUeNlXGyf9YqeDvWpjkkVzR2w0jC/uHVCTLQtCm5BZsj",
+          "NodeBase": "ns=4;s=|var|AX-364ELA0MA1T.Application.GVL_Opc_Station."
+        },
+        {
+          "ServerIP": "192.168.1.154",
+          "ServerPort": "4840",
+          "OPCName": "IFM 2 PC",
+          "Recipe": "1",
+          "Token": "aLC2oybz/rNWiZJhvRRHpUeNlXGyf9YqeDvWpjkkVzR2w0jC/uHVCTLQtCm5BZsj",
+          "NodeBase": "ns=4;s=|var|AX-364ELA0MA1T.Application.GVL_Opc_Station."
+        },
+        {
+          "ServerIP": "192.168.1.154",
+          "ServerPort": "4840",
+          "OPCName": "IFM 3 Controller",
+          "Recipe": "1",
+          "Token": "aLC2oybz/rNWiZJhvRRHpUeNlXGyf9YqeDvWpjkkVzR2w0jC/uHVCTLQtCm5BZsj",
+          "NodeBase": "ns=4;s=|var|AX-364ELA0MA1T.Application.GVL_Opc_Station."
+        }
+      ]
     }
   ]
 }
