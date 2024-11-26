@@ -115,7 +115,7 @@ namespace Middleware.Fundamental
                 
                 if (Encoding.ASCII.GetString(buffer, 0, bytesRead).Contains("11"))
                 {
-                    sock.ReceiveTimeout = 20;
+                    sock.ReceiveTimeout = 200;
                     for (int i = 0; i < 3; i++)
                     {
                         try

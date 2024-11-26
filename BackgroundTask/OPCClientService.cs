@@ -219,6 +219,7 @@ namespace Middleware.BackgroundTask
                 }
                 catch (Exception ex)
                 {
+                    
                     continue;
                 }
                 try
