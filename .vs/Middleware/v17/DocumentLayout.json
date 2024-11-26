@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\workflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\workflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\machinestatusupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\machinestatusupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\bllserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\bllserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\workflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\workflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\agvtasklist.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -226,11 +226,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 383,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BLLServer.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServer.cs",
               "RelativeDocumentMoniker": "Controller\\BLLServer.cs",
@@ -239,8 +239,7 @@
               "ViewState": "AQIAAOoAAAAAAAAAAAAQwPQAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T02:04:31.959Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -256,13 +255,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "WorkflowController.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
               "RelativeDocumentMoniker": "Controller\\WorkflowController.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
               "RelativeToolTip": "Controller\\WorkflowController.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAAAwwMEAAABIAAAA",
+              "ViewState": "AQIAALgAAAAAAAAAAAAwwMcAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T02:23:40.383Z",
               "EditorCaption": ""
@@ -277,8 +276,7 @@
               "RelativeToolTip": "BackgroundTask\\OPCClientService.cs",
               "ViewState": "AQIAAAUBAAAAAAAAAAAMwBUBAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T01:55:51.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T01:55:51.557Z"
             },
             {
               "$type": "Document",
@@ -290,8 +288,7 @@
               "RelativeToolTip": "Fundamental\\OPCUA.cs",
               "ViewState": "AQIAAMoAAAAAAAAAAADwv00AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:13:49.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:13:49.015Z"
             },
             {
               "$type": "Document",
@@ -303,12 +300,11 @@
               "RelativeToolTip": "DataHolder\\HomingDone.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:20:10.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T06:20:10.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsetting.json",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\appsetting.json",
               "RelativeDocumentMoniker": "appsetting.json",
@@ -316,12 +312,11 @@
               "RelativeToolTip": "appsetting.json",
               "ViewState": "AQIAAKsAAAAAAAAAAAAAALgAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-24T08:44:25.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T08:44:25.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CreateTaskReturn.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\CreateTaskReturn.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\CreateTaskReturn.cs",
@@ -329,12 +324,11 @@
               "RelativeToolTip": "Model\\AMR\\CreateTaskReturn.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T07:29:49.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T07:29:49.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ReportTaskStatus.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\ReportTaskStatus.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\ReportTaskStatus.cs",
@@ -342,21 +336,19 @@
               "RelativeToolTip": "Model\\AMR\\ReportTaskStatus.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:20:09.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T15:20:09.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MachineStatusUpdate.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\MachineStatusUpdate.cs",
               "RelativeDocumentMoniker": "Model\\MachineStatusUpdate.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\MachineStatusUpdate.cs",
               "RelativeToolTip": "Model\\MachineStatusUpdate.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA4AAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T01:15:53.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T01:15:53.936Z"
             },
             {
               "$type": "Document",
@@ -368,8 +360,7 @@
               "RelativeToolTip": "AGVTaskList.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-18T07:22:04.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T07:22:04.842Z"
             },
             {
               "$type": "Document",
@@ -381,8 +372,7 @@
               "RelativeToolTip": "BackgroundTask\\MagazineLoaderService.cs",
               "ViewState": "AQIAADcAAAAAAAAAAAArwFAAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:22:22.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T14:22:22.591Z"
             },
             {
               "$type": "Document",
@@ -394,8 +384,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAQwBEAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T15:29:48.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T15:29:48.91Z"
             },
             {
               "$type": "Document",
@@ -407,8 +396,7 @@
               "RelativeToolTip": "Startup.cs",
               "ViewState": "AQIAADkAAAAAAAAAAAAYwEIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T10:25:37.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T10:25:37.89Z"
             },
             {
               "$type": "Document",

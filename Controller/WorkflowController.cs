@@ -145,6 +145,7 @@ namespace Middleware.Controller
                     }
                     else if (mesPost.TaskID == "AGV")
                     {
+                        Logger.LogMessage("Successfully call agv", "agv");
                         CreateTask createTask = new CreateTask();
                         bool isFound = false;
                         foreach (var taskMapping in AMRTaskMapping.amrTaskMapping)
@@ -193,8 +194,10 @@ namespace Middleware.Controller
                         BLLServer server = new BLLServer();
                         for (int i = 0; i < 5 && await server.createAGVTask(createTask) != 1; i++)
                         {
+                            Logger.LogMessage("Reattempt to call agv", "agv");
                             if (i == 4)
                             {
+                                Logger.LogMessage("call agv fail", "agv");
                                 result.HasResult = false;
                                 return Ok(result);
                             }
