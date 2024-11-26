@@ -1,5 +1,5 @@
 {
-  "SelectedModeId": "1",
+  "SelectedModeId": "4",
   "ApplicationUrl": "http://0.0.0.0:4862",
   "ModeConfigurations": [
     {
@@ -67,7 +67,7 @@
     },
     {
       "ModeId": "4",
-      "RobotName": "Conveyor Station 1",
+      "RobotName": "Epson",
       "SelfAPIPort": "4847",
       "EndpointType": "TCP",
       "Clients": [
@@ -78,12 +78,12 @@
       ],
       "Server": [
         {
-          "IP": "127.0.0.1",
+          "IP": "192.168.1.159",
           "Port": "4849"
         }
       ],
-      "MESIP": "192.168.3.108",
-      "MESPort": "82",
+      "MESIP": "127.0.0.1",
+      "MESPort": "8080",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
       "MESRequestTimeOut": "3000"
     },

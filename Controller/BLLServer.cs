@@ -114,7 +114,7 @@ namespace Middleware.Controller
                 {
                     return 1;
                 }
-                if (previousStatus == "Busy" & Status == "Free")
+                if (previousStatus == "Busy" && Status == "Free")
                 {
                     machineStatusUpdate.InTime = InTime;
                     machineStatusUpdate.OutTime = DateTime.Now;
@@ -135,7 +135,7 @@ namespace Middleware.Controller
                 machineStatusUpdateResult = JsonConvert.DeserializeObject<MachineStatusUpdateResult>(responseBody);
                 if (machineStatusUpdateResult.HasResult)
                 {
-                    if (previousStatus == "Free" & Status == "Busy")
+                    if (previousStatus == "Free" && Status == "Busy")
                     {
                         InTime = machineStatusUpdate.InTime;
                     }
@@ -292,7 +292,7 @@ namespace Middleware.Controller
                 {
                     return 0;
                 }
-                if (createTaskReturn.content.taskStatus == 3 | createTaskReturn.content.taskStatus == 5)
+                if (createTaskReturn.content.taskStatus == "3" | createTaskReturn.content.taskStatus == "5")
                 {
                     return 1;//task done
                 }

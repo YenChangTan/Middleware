@@ -13,7 +13,7 @@ namespace Middleware.Model.AMR
         public string taskName { get; set; }
         public string carDeviceId { get; set; }
         public string carName { get; set; }
-        public int taskStatus { get; set; }
+        public string taskStatus { get; set; }
         public List<Subtask> subtasks { get; set; }
     }
 }

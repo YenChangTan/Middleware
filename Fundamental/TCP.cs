@@ -62,6 +62,106 @@ namespace Middleware.Fundamental
                 return 3;
             }
         }
+
+        public int SendRecipeWithLineEnder(int recipeId)
+        {
+            int resultCode = 0;
+            try
+            {
+                RecipeId = recipeId;
+                resultCode = SendWithLineEnder("RECIPE");
+                if (resultCode != 1)
+                {
+                    return resultCode;
+                }
+                else
+                {
+                    resultCode = ReceiveWithLineEnder();
+                    return resultCode;
+                }
+            }
+            catch
+            {
+                resultCode = 3;
+                return 3;
+            }
+        }
+
+        public int SendWithLineEnder(string command)//return 0 means data error, 1: no error, 2: connection aborted
+        {
+            int DataLength = 9;
+            byte[] bytesToSend = new byte[DataLength + 2];
+            byte[] bytesToSendWithoutCRC = new byte[DataLength];
+            try
+            {
+                if (command == "RECIPE")
+                {
+                    Array.Copy(Encoding.ASCII.GetBytes(command), bytesToSendWithoutCRC, DataLength - 3);
+                    bytesToSendWithoutCRC[DataLength - 3] = (byte)(RecipeId + '0');
+                    bytesToSendWithoutCRC[DataLength - 2] = 0x0D;
+                    bytesToSendWithoutCRC[DataLength - 1] = 0x0A;
+                    RecipeId = 0;
+                    int bytesSent = sock.Send(bytesToSendWithoutCRC);
+                    SentString = Encoding.ASCII.GetString(bytesToSendWithoutCRC, 0,DataLength - 2);
+                    Console.WriteLine(SentString);
+                    return 1;//success
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (SocketException ex)
+            {
+                return 2;//fail to send due to the connection aborted.
+            }
+            catch (Exception e)
+            {
+                return 3;//unexpected error.
+            }
+        }
+
+        public int ReceiveWithLineEnder()
+        {
+            int DataLength = 9;
+            int resultCode = 0; // 0: data error, 1: success, 2: connection aborted, 3: unexpected error
+            byte[] buffer = new byte[1024];
+            byte[] receiveByteWithoutCRC = new byte[DataLength];
+            try
+            {
+
+                int bytesRead = sock.Receive(buffer);
+                if (bytesRead == DataLength)
+                {
+                    if (Encoding.ASCII.GetString(buffer, 0, DataLength-2) == SentString)
+                    {
+                        resultCode = 1;
+                        return resultCode;
+                    }
+                    else
+                    {
+                        resultCode = 0;
+                        return resultCode;
+                    }
+                }
+                else
+                {
+                    resultCode = 0;
+                    return resultCode;
+                }
+            }
+            catch (SocketException ex)
+            {
+                resultCode = 2;
+                return resultCode;
+            }
+            catch (Exception ex)
+            {
+                resultCode = 3;
+                return resultCode;
+            }
+        }
+
         public int Send(string command)//return 0 means data error, 1: no error, 2: connection aborted
         {
             int DataLength = 7;
@@ -74,9 +174,7 @@ namespace Middleware.Fundamental
                     Array.Copy(Encoding.ASCII.GetBytes(command), bytesToSendWithoutCRC, DataLength - 1);
                     bytesToSendWithoutCRC[DataLength - 1] = (byte)( RecipeId + '0');
                     RecipeId = 0;
-                    bytesToSendWithoutCRC = new byte[7] { 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37 };
                     int bytesSent = sock.Send(bytesToSendWithoutCRC);
-                    Console.WriteLine(bytesSent);
                     SentString = Encoding.ASCII.GetString(bytesToSendWithoutCRC);
                     Console.WriteLine(SentString);
                     return 1;//success
@@ -199,6 +297,18 @@ namespace Middleware.Fundamental
                 return resultCode;
             }
         }
+        public void CloseTcp()
+        {
+            try
+            {
+                sock.Shutdown(SocketShutdown.Both);
+                sock.Close();
+            }
+            catch
+            {
+
+            }
+        }
         public byte[] CRCCal(byte[] data)
         {
             ushort crc = 0xFFFF;
@@ -236,5 +346,7 @@ namespace Middleware.Fundamental
             }
             return hex.ToString();
         }
+
+
     }
 }

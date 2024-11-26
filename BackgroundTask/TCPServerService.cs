@@ -33,7 +33,13 @@ namespace Middleware.BackgroundTask
             //{
             //    _ = GetTrayBarcode(_modeConfiguration.Clients[1]);
             //}
-            _ = GetTrayBarcode(_modeConfiguration.Server[1]);
+
+            //link to camera, uncomment the following part.
+            //if (_modeConfiguration.RobotName == "Epson")
+            //{
+            //    _ = GetTrayBarcode(_modeConfiguration.Server[1]);
+            //}
+            
             await TCPServer(_modeConfiguration.Clients.First().IP, _modeConfiguration.Clients.First().Port);
         }
 
@@ -116,7 +122,15 @@ namespace Middleware.BackgroundTask
                     //{
                     //    _ = HandleClient2(client);
                     //}
-                    _ = HandleClient2(client);
+                    if (_modeConfiguration.RobotName == "Epson")
+                    {
+                        _ = HandleClientWithLineEnder(client);
+                    }
+                    else
+                    {
+                        _ = HandleClient2(client);
+                    }
+                    
                     
                 }
                 catch (Exception ex)
@@ -177,12 +191,12 @@ namespace Middleware.BackgroundTask
         //                        if (MagazineCounter)
         //                        {
         //                            LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
-                                    
+
         //                        }
         //                        else
         //                        {
         //                            LoaderReportData.loaderReport.MagazineId = "SIPMGZ002";
-                                    
+
         //                        }
         //                        if (LoaderReportData.loaderReport.TimeStamp != null && LoaderReportData.loaderReport.TimeStamp.Any())
         //                        {
@@ -234,6 +248,163 @@ namespace Middleware.BackgroundTask
         //        }
         //    }
         //}
+
+        public async Task HandleClientWithLineEnder(TcpClient client)//this function handle client side from Epson at station 1.
+        {
+            using (client)
+            {
+                NetworkStream stream = client.GetStream();
+                BLLServer server = new BLLServer();
+                int DataLength = 9;
+                byte[] buffer = new byte[1024];
+                byte[] bytesToSendWithoutCRC = new byte[DataLength];
+                byte[] byteToSend = new byte[DataLength];
+                byte[] receiveBytesWithoutCRC = new byte[DataLength];
+                string pcbBarcode = null;
+                try
+                {
+                    while (true)
+                    {
+                        buffer = new byte[1024];
+                        bytesToSendWithoutCRC = new byte[DataLength];
+                        byteToSend = new byte[DataLength];
+                        receiveBytesWithoutCRC = new byte[DataLength];
+                        int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                        if (bytesRead == 0)
+                        {
+                            break;
+                        }
+                        if (bytesRead == DataLength)
+                        {
+                            //Array.Copy(buffer, receiveBytesWithoutCRC, DataLength);
+                            //Array.Copy(buffer, DataLength, receivedCRC, 0, 2);
+                            //if (!receivedCRC.SequenceEqual(CRCCal(receiveBytesWithoutCRC)))
+                            //{
+                            //    await stream.WriteAsync(AttachCRC(Encoding.ASCII.GetBytes("DATAERR")));
+                            //    continue;
+                            //}
+                            if (Encoding.ASCII.GetString(buffer, 0, DataLength - 3) == "STATUS")
+                            {
+
+                                string Status = null;
+                                int updateMachineStatusResult;
+                                //Array.Copy(buffer, byteToSend, DataLength);
+                                await stream.WriteAsync(byteToSend);
+                                switch (buffer[DataLength - 3])
+                                {
+                                    case (byte)'0'://Free
+                                        Status = "Free";
+                                        if (_modeConfiguration.RobotName == "Robco 2")
+                                        {
+                                            try// this section is use for station 
+                                            {
+                                                _taskSyncService.ProceedTaskSource.TrySetResult(true);
+                                            }
+                                            finally
+                                            {
+                                                _taskSyncService.Reset();
+                                            }
+                                        }
+
+                                        //if (updateMachineStatusResult == 1)
+                                        //{
+                                        //    Array.Copy(buffer, byteToSend, DataLength);
+                                        //    await stream.WriteAsync(byteToSend);
+                                        //}
+                                        //else // == 0
+                                        //{
+                                        //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        //}
+                                        break;
+                                    case (byte)'1'://Busy
+                                        Status = "Busy";
+                                        //updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Busy");
+                                        //if (updateMachineStatusResult == 1)
+                                        //{
+                                        //    Array.Copy(buffer, byteToSend, DataLength);
+                                        //    await stream.WriteAsync(byteToSend);
+                                        //}
+                                        //else // == 0
+                                        //{
+                                        //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        //}
+                                        break;
+                                    default:
+                                        Status = "Error";
+
+                                        //updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Error");
+                                        //if (updateMachineStatusResult == 1)
+                                        //{
+                                        //    Array.Copy(buffer, byteToSend, DataLength);
+                                        //    await stream.WriteAsync(byteToSend);
+                                        //}
+                                        //else // == 0
+                                        //{
+                                        //    await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                        //}
+                                        break;
+                                }
+                                Console.WriteLine(Status);
+                                _ = Task.Run(async () =>
+                                {
+                                    for (int i = 0; i < 5 && (await server.UpdateMachineStatus(_modeConfiguration.RobotName, Status)) != 1; i++)
+                                    {
+                                    }
+                                });
+                            }
+                            
+                        }
+                        else
+                        {
+                            if (bytesRead == 12 && Encoding.ASCII.GetString(buffer, 0, 6) == "SIPBTS")
+                            {
+                                pcbBarcode = Encoding.ASCII.GetString(buffer, 0, 10);
+                                int pcbStatusResult = 3;
+                                for (int i = 0; i < 5 && (pcbStatusResult = await server.GetPCBStatus(pcbBarcode)) == 3; i++)
+                                {
+                                }
+                                Console.WriteLine("pcb check result code is "+pcbStatusResult);
+                                switch (pcbStatusResult)
+                                {
+                                    case 0://pcb is under good condition.
+                                        Array.Copy(Encoding.ASCII.GetBytes("STATUS"), bytesToSendWithoutCRC, 6);
+                                        bytesToSendWithoutCRC[DataLength - 3] = (byte)'0';
+                                        bytesToSendWithoutCRC[DataLength - 2] = 0x0D;
+                                        bytesToSendWithoutCRC[DataLength - 1] = 0x0A;
+                                        await stream.WriteAsync(bytesToSendWithoutCRC);
+                                        break;
+                                    case 1://pcb is defected.
+                                        Array.Copy(Encoding.ASCII.GetBytes("STATUS"), bytesToSendWithoutCRC, 6);
+                                        bytesToSendWithoutCRC[DataLength - 3] = (byte)'1';
+                                        bytesToSendWithoutCRC[DataLength - 2] = 0x0D;
+                                        bytesToSendWithoutCRC[DataLength - 1] = 0x0A;
+                                        await stream.WriteAsync(bytesToSendWithoutCRC);
+                                        TrayNPCBData.trayNPCB.PCBIDs.Add(pcbBarcode);
+                                        break;
+                                    default: //pcb not found or data error.
+                                        Array.Copy(Encoding.ASCII.GetBytes("STATUS"), bytesToSendWithoutCRC, 6);
+                                        bytesToSendWithoutCRC[DataLength - 3] = (byte)'2';
+                                        bytesToSendWithoutCRC[DataLength - 2] = 0x0D;
+                                        bytesToSendWithoutCRC[DataLength - 1] = 0x0A;
+                                        await stream.WriteAsync(bytesToSendWithoutCRC);
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                Array.Copy(Encoding.ASCII.GetBytes("DATAERR"), bytesToSendWithoutCRC, 6);
+                                
+                                await stream.WriteAsync(bytesToSendWithoutCRC);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+        }
 
         public async Task HandleClient2(TcpClient client)//this function handle client side from Epson at station 1.
         {
@@ -333,7 +504,7 @@ namespace Middleware.BackgroundTask
                                 }
                                 _ = Task.Run(async()=>
                                 {
-                                    for (int i = 0; i < 5 & (await server.UpdateMachineStatus(_modeConfiguration.RobotName, Status)) != 1; i++)
+                                    for (int i = 0; i < 5 && (await server.UpdateMachineStatus(_modeConfiguration.RobotName, Status)) != 1; i++)
                                     {
                                     }
                                 });
@@ -344,7 +515,7 @@ namespace Middleware.BackgroundTask
                                 await stream.WriteAsync(byteToSend);
                                 int updateMachineStatusResult = 0;
                                 //need to add update tho
-                                for (int i = 0; i < 5 & (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "can pick")) != 1; i++)
+                                for (int i = 0; i < 5 && (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "can pick")) != 1; i++)
                                 {
                                 }
                                 if (updateMachineStatusResult == 1)
@@ -366,9 +537,9 @@ namespace Middleware.BackgroundTask
                             }
                             else if (Encoding.ASCII.GetString(buffer, 0, DataLength) == "CANPICK")
                             {
-                                int updateMachineStatusResult;
+                                int updateMachineStatusResult = 0;
                                 //need to add to update to MES, confirm JSON Body
-                                for (int i = 0; i < 5 & (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "can pick")) != 1; i++)
+                                for (int i = 0; i < 5 && (updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "can pick")) != 1; i++)
                                 {
                                 }
                                 if (updateMachineStatusResult == 1)
@@ -401,11 +572,11 @@ namespace Middleware.BackgroundTask
                         }
                         else
                         {
-                            if (bytesRead == 10 & Encoding.ASCII.GetString(buffer, 0, 6) == "SIPBTS")
+                            if (bytesRead == 10 && Encoding.ASCII.GetString(buffer, 0, 6) == "SIPBTS")
                             {
                                 pcbBarcode = Encoding.ASCII.GetString(buffer, 0, 10);
                                 int pcbStatusResult = 3;
-                                for (int i = 0; i<5 & (pcbStatusResult = await server.GetPCBStatus(pcbBarcode)) == 3; i++)
+                                for (int i = 0; i<5 && (pcbStatusResult = await server.GetPCBStatus(pcbBarcode)) == 3; i++)
                                 {
                                 }
                                 switch (pcbStatusResult)

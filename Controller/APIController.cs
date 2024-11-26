@@ -43,7 +43,7 @@ namespace Middleware.Controller
                     MachineStatusUpdate machineStatusUpdate = JsonConvert.DeserializeObject<MachineStatusUpdate>(requestBody);
                     if (machineStatusUpdate.TaskName == "Recipe")
                     {
-                        for (int i = 0; i<5 & !_tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().Port.ToString()) ; i++)
+                        for (int i = 0; i<5 && !_tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().Port.ToString()) ; i++)
                         {
                             if (i == 4)
                             {
@@ -56,7 +56,7 @@ namespace Middleware.Controller
                         if (machineStatusUpdate.Recipe == "1")
                         {
                             int resultCode = 0;
-                            for (int i = 0 ; i<5 & (resultCode = _tcp.SendRecipe(1)) != 1; i++)
+                            for (int i = 0 ; i<5 && (resultCode = _tcp.SendRecipe(1)) != 1; i++)
                             {
                                 if (resultCode != 0 | i == 4)
                                 {
@@ -149,7 +149,7 @@ namespace Middleware.Controller
                             return Ok(result);
                         }
                         BLLServer server = new BLLServer();
-                        for (int i = 0; i < 5 & await server.createAGVTask(createTask) != 1; i++)
+                        for (int i = 0; i < 5 && await server.createAGVTask(createTask) != 1; i++)
                         {
                             if (i == 4)
                             {
@@ -188,7 +188,7 @@ namespace Middleware.Controller
                 {
                     string requestBody = await reader.ReadToEndAsync();
                     ReportTaskStatus reportTaskStatus = JsonConvert.DeserializeObject<ReportTaskStatus>(requestBody);
-                    if (reportTaskStatus.taskStatus == 3)
+                    if (reportTaskStatus.taskStatus == "3")
                     {
                         foreach (var task in AMRTaskList.taskDetailsForMEs)
                         {
@@ -197,7 +197,7 @@ namespace Middleware.Controller
                                 task.isDone = true;
                                 BLLServer server = new BLLServer();
                                 MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
-                                for (int i = 0; i < 5 & (await server.UpdateMachineStatus(task.orderId, "Done") != 1); i++)//need to update here, put updatemachinestatus is just for temporary.
+                                for (int i = 0; i < 5 && (await server.UpdateMachineStatus(task.orderId, "Done") != 1); i++)//need to update here, put updatemachinestatus is just for temporary.
                                 {
                                     if (i == 4)
                                     {

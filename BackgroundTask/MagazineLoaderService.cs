@@ -50,7 +50,7 @@ namespace Middleware.BackgroundTask
                             LoaderReportData.loaderReport.TimeStamp.Add(Now);
                             await Task.Run(async () =>
                             {
-                                for (int i = 0; i < 2 & (await server.UpdateMagazineTimeStamp(Now) != 1); i++)
+                                for (int i = 0; i < 2 && (await server.UpdateMagazineTimeStamp(Now) != 1); i++)
                                 {
                                 }
                             });
@@ -78,7 +78,7 @@ namespace Middleware.BackgroundTask
                             LoaderReportData.loaderReport = new LoaderReport();
                             await Task.Run(async () =>
                             {
-                                for (int i = 0; i < 2 & (await server.UpdateMagazineReport(update)) != 1; i++)
+                                for (int i = 0; i < 2 && (await server.UpdateMagazineReport(update)) != 1; i++)
                                 {
                                 }
                             });

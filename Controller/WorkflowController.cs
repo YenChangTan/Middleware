@@ -16,6 +16,7 @@ using System.Reflection.PortableExecutable;
 using System.Net.Http.Json;
 using Middleware.DataHolder;
 using Opc.Ua;
+using System.Net.Sockets;
 
 namespace Middleware.Controller
 {
@@ -51,6 +52,7 @@ namespace Middleware.Controller
                 {
                     string requestBody = await reader.ReadToEndAsync();
                     MESPost mesPost = JsonConvert.DeserializeObject<MESPost>(requestBody);
+                    
                     if (mesPost.TaskID == "Recipe")
                     {
 
@@ -64,20 +66,24 @@ namespace Middleware.Controller
                         //    }
                         //    await Task.Delay(1000);
                         //}
+                        Console.WriteLine("Start attempt connecting");
                         bool isConnected = _tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().Port.ToString());
                         if (!isConnected)
                         {
                             result.HasResult = false;
+                            result.Message = "Connect fail";
                             return Ok(result);
                         }
+                        Console.WriteLine("Connect successfully");
                         await Task.Delay(500);
                         if (mesPost.Recipe == "1")
                         {
                             int resultCode = 0;
-                            for (int i = 0; i < 5 & (resultCode = _tcp.SendRecipe(1)) != 1; i++)
+                            for (int i = 0; i < 5 && (resultCode = _tcp.SendRecipeWithLineEnder(1)) != 1; i++)
                             {
                                 if (resultCode != 0 | i == 4)
                                 {
+                                    _tcp.CloseTcp();
                                     result.HasResult = false;
                                     return Ok(result);
                                 }
@@ -93,6 +99,7 @@ namespace Middleware.Controller
                             //    result.HasResult = false;
                             //    return Ok(result);
                             //}
+                            _tcp.CloseTcp();
                             result.HasResult = true;
                             return Ok(result);
 
@@ -101,20 +108,23 @@ namespace Middleware.Controller
                         else if (mesPost.Recipe == "2")
                         {
                             int resultCode = 0;
-                            for (int i = 0; i < 5 & (resultCode = _tcp.SendRecipe(2)) != 1; i++)
+                            for (int i = 0; i < 5 && (resultCode = _tcp.SendRecipe(2)) != 1; i++)
                             {
                                 if (resultCode != 0 | i == 4)
                                 {
+                                    _tcp.CloseTcp();
                                     result.HasResult = false;
                                     return Ok(result);
                                 }
                             }
+                            _tcp.CloseTcp();
                             result.HasResult = true;
                             return Ok(result);
 
                         }
                         else
                         {
+                            _tcp.CloseTcp();
                             result.HasResult = false;
                             return Ok(result);
                         }
@@ -181,7 +191,7 @@ namespace Middleware.Controller
                             return Ok(result);
                         }
                         BLLServer server = new BLLServer();
-                        for (int i = 0; i < 5 & await server.createAGVTask(createTask) != 1; i++)
+                        for (int i = 0; i < 5 && await server.createAGVTask(createTask) != 1; i++)
                         {
                             if (i == 4)
                             {
@@ -256,7 +266,7 @@ namespace Middleware.Controller
                 {
                     string requestBody = await reader.ReadToEndAsync();
                     ReportTaskStatus reportTaskStatus = JsonConvert.DeserializeObject<ReportTaskStatus>(requestBody);
-                    if (reportTaskStatus.taskStatus == 3)
+                    if (reportTaskStatus.taskStatus == "3")
                     {
                         foreach (var task in AMRTaskList.taskDetailsForMEs)
                         {
@@ -265,7 +275,7 @@ namespace Middleware.Controller
                                 task.isDone = true;
                                 BLLServer server = new BLLServer();
                                 MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
-                                for (int i = 0; i < 5 & (await server.UpdateMachineStatus(task.orderId, "Done") != 1); i++)//need to update here, put updatemachinestatus is just for temporary.
+                                for (int i = 0; i < 5 && (await server.UpdateMachineStatus(task.orderId, "Done") != 1); i++)//need to update here, put updatemachinestatus is just for temporary.
                                 {
                                     if (i == 4)
                                     {
