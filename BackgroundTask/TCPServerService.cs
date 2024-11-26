@@ -451,7 +451,6 @@ namespace Middleware.BackgroundTask
                                 {
                                     case (byte)'0'://Free
                                         Status = "Free";
-                                        updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Free");
                                         if (_modeConfiguration.RobotName == "Robco 2")
                                         {
                                             try// this section is use for station 

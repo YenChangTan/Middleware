@@ -1,6 +1,6 @@
 {
-  "SelectedModeId": "4",
-  "ApplicationUrl": "http://0.0.0.0:4862",
+  "SelectedModeId": "9",
+  "ApplicationUrl": "http://0.0.0.0:4865",
   "ModeConfigurations": [
     {
       "ModeId": "1",
@@ -179,7 +179,7 @@
     {
       "ModeId": "9",
       "RobotName": "FEXA",
-      "SelfAPIPort": "4862",
+      "SelfAPIPort": "4865",
       "EndpointType": "API",
       "ServerIP": "127.0.0.1",
       "ServerPort": "4863",

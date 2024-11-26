@@ -334,6 +334,11 @@ namespace Middleware.Controller
                     MESPost mesPost = JsonConvert.DeserializeObject<MESPost>(requestBody);
                     if (!mesPost.TaskID.Contains("IFM"))
                     {
+                        if (!HomingDone.isHomingDone)
+                        {
+                            result.Message = "Homing is not finished";
+                            return Ok(result);
+                        }
                         bool isConnectionFound = false;
                         foreach (var opcConnection in OPCConnections.opcConnections)
                         {

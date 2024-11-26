@@ -88,7 +88,6 @@ namespace Middleware.BackgroundTask
                                 continue;
                             }
                             
-                            Console.WriteLine($"Conveyor is {Status}");
                             _ = bllServer1.UpdateMachineStatus("IFM 1", Status);
                             //need update to MES
                         }
@@ -117,8 +116,7 @@ namespace Middleware.BackgroundTask
                                 continue;
                             }
                             
-                            Console.WriteLine($"Conveyor is {Status}");
-                            _ = bllServer2.UpdateMachineStatus("IFM 2", Status);
+                            _ = bllServer2.UpdateMachineStatus("IFM 2 PC", Status);
                             //need update to MES
                         }
                         dataValue = await _opcClient.OpcReadAsync($"{_modeConfiguration.OPC.FirstOrDefault().NodeBase}Status4");
@@ -145,8 +143,7 @@ namespace Middleware.BackgroundTask
                             {
                                 continue;
                             }
-                            Console.WriteLine($"Conveyor is {Status}");
-                            _ = bllServer4.UpdateMachineStatus("IFM 3", Status);
+                            _ = bllServer4.UpdateMachineStatus("IFM 3 Controller", Status);
                             //need update to MES
 
                         }
@@ -278,6 +275,7 @@ namespace Middleware.BackgroundTask
                             continue;
                         }
                         HomingBool = false;
+                        HomingDone.isHomingDone = true;
                     }
 
                     if (HomingBool)

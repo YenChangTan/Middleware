@@ -11,8 +11,8 @@ namespace Middleware.Model.AMR
         public int status {  get; set; }
         public ReportTaskStatus content { get; set; }
         public int total { get; set; }
-        public int timestamp { get; set; }
+        public string timestamp { get; set; }
         public string message { get; set; }
-        public int code { get; set; }
+        public string code { get; set; }
     }
 }

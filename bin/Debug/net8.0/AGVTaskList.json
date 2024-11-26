@@ -1,7 +1,7 @@
 {
   "1": {
     "name": "testing",
-    "deviceId": "123",
+    "deviceId": "BC-69-7A-AD-25-6B",
     "orderId`": "1",
     "subtaskInfos": [
       {
@@ -9,8 +9,7 @@
         "name": "1"
       },
       {
-        "type": "unload",
-        "thingsId": "1"
+        "type": "unload"
       }
     ],
     "thingsId": "7"

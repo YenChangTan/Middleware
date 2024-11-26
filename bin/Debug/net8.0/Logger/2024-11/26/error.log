@@ -140,3 +140,721 @@
 19:49:46.435 Fail to connect, reconnecting
 19:49:49.510 Fail to connect, reconnecting
 19:49:52.576 Fail to connect, reconnecting
+23:27:50.778 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:27:50.933 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:05.996 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:06.021 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:06.050 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:06.101 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:06.134 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:06.144 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:06.153 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:21.173 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:21.191 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:21.205 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:21.224 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:21.236 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:21.257 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:21.284 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:21.295 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:36.285 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:28:36.303 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:36.339 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:36.348 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:36.382 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:36.408 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:36.416 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:51.447 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:51.491 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:51.500 Error in Select OPC Endpoint : BadRequestTimeout
+23:28:51.519 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:28:51.573 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:06.573 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:29:06.614 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:06.655 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:06.707 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:06.724 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:06.741 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:21.667 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:29:21.692 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:21.764 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:21.783 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:21.793 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:21.814 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:21.836 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:21.856 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:36.720 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:36.742 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:36.858 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:36.892 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:36.935 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:36.954 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:36.972 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:51.776 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:51.798 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:51.962 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:51.995 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:52.012 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:52.021 Error in Select OPC Endpoint : BadRequestTimeout
+23:29:52.043 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:29:52.061 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:06.828 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:06.856 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:07.043 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:07.062 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:07.108 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:07.146 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:07.165 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:21.890 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:21.910 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:22.116 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:22.139 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:22.198 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:22.235 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:22.252 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:36.939 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:36.971 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:37.160 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:37.185 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:37.277 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:37.285 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:37.307 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:37.325 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:51.997 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:52.032 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:52.211 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:52.232 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:52.366 Error in Select OPC Endpoint : BadRequestTimeout
+23:30:52.405 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:30:52.423 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:07.065 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:07.091 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:07.269 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:07.288 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:07.462 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:31:07.498 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:07.518 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:22.126 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:22.148 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:22.306 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:22.326 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:22.528 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:22.544 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:22.566 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:22.584 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:37.171 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:37.194 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:37.357 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:37.380 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:37.618 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:37.667 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:52.222 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:52.245 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:52.406 Error in Select OPC Endpoint : BadRequestTimeout
+23:31:52.426 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:52.714 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:31:52.757 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:31:52.768 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:07.263 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:07.284 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:07.447 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:07.468 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:07.804 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:07.841 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:07.863 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:22.319 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:22.340 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:22.488 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:22.506 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:22.894 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:22.895 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:22.927 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:22.937 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:37.368 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:37.390 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:37.523 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:37.543 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:37.963 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:37.970 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:37.989 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:38.006 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:52.413 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:52.440 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:52.570 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:32:52.591 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:53.043 Error in Select OPC Endpoint : BadRequestTimeout
+23:32:53.078 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:32:53.094 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:07.469 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:07.492 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:07.611 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:07.633 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:08.131 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:08.171 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:08.185 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:22.519 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:22.539 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:22.654 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:22.674 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:23.226 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:23.261 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:23.280 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:37.569 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:37.602 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:37.696 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:37.716 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:38.311 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:38.365 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:52.632 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:52.655 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:52.742 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:52.761 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:33:53.414 Error in Select OPC Endpoint : BadRequestTimeout
+23:33:53.456 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:07.675 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:07.705 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:07.784 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:07.805 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:08.521 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:08.573 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:22.734 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:22.754 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:22.829 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:22.850 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:23.615 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:23.627 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:23.651 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:23.671 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:37.774 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:37.796 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:37.886 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:37.906 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:38.699 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:38.734 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:38.752 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:52.816 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:52.837 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:52.928 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:52.958 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:53.793 Error in Select OPC Endpoint : BadRequestTimeout
+23:34:53.831 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:34:53.850 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:07.869 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:07.894 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:07.993 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:08.014 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:08.894 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:08.948 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:22.915 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:22.935 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:23.041 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:23.061 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:23.984 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:23.992 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:24.022 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:24.039 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:37.959 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:37.983 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:38.082 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:38.104 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:39.075 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:39.115 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:39.132 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:53.010 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:53.044 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:53.139 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:53.159 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:54.166 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:54.174 Error in Select OPC Endpoint : BadRequestTimeout
+23:35:54.196 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:35:54.214 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:08.062 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:08.084 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:08.188 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:08.210 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:09.249 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:09.285 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:09.301 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:23.104 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:23.142 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:23.245 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:23.267 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:24.331 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:24.336 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:24.377 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:38.170 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:38.194 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:38.294 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:38.319 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:39.426 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:39.472 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:53.224 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:53.250 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:53.349 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:53.368 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:54.526 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:54.532 Error in Select OPC Endpoint : BadRequestTimeout
+23:36:54.555 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:36:54.570 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:08.278 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:08.299 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:08.387 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:08.407 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:09.615 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:09.651 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:09.665 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:23.321 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:23.343 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:23.431 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:23.451 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:24.704 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:24.744 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:24.765 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:38.370 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:38.390 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:38.479 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:38.502 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:39.820 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:39.854 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:39.869 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:53.415 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:53.436 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:53.524 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:53.545 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:54.892 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:54.898 Error in Select OPC Endpoint : BadRequestTimeout
+23:37:54.919 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:37:54.935 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:08.463 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:08.484 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:08.574 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:08.592 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:09.961 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:09.967 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:09.991 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:10.006 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:23.516 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:23.535 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:23.611 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:23.631 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:25.037 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:38:25.044 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:25.066 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:25.084 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:38.563 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:38.591 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:38.655 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:38.676 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:40.119 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:40.156 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:40.171 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:53.612 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:53.635 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:53.705 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:53.725 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:38:55.192 Error in Select OPC Endpoint : BadRequestTimeout
+23:38:55.212 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:08.661 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:08.682 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:08.755 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:08.775 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:10.243 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:10.260 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:23.708 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:39:23.740 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:23.797 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:23.816 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:25.293 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:25.312 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:38.763 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:38.786 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:38.844 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:38.866 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:40.345 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:40.367 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:53.818 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:53.849 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:53.897 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:53.916 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:39:55.392 Error in Select OPC Endpoint : BadRequestTimeout
+23:39:55.412 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:08.873 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:08.899 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:08.949 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:08.970 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:10.443 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:10.463 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:23.920 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:23.950 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:23.997 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:24.019 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:25.491 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:25.514 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:38.971 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:38.993 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:39.051 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:39.073 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:40.538 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:40.560 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:54.024 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:40:54.046 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:54.096 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:54.115 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:40:55.581 Error in Select OPC Endpoint : BadRequestTimeout
+23:40:55.604 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:09.073 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:09.102 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:09.137 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:09.156 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:10.648 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:10.679 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:24.119 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:24.142 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:24.183 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:24.203 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:25.712 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:25.735 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:39.160 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:39.180 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:39.222 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:39.240 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:40.763 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:40.787 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:54.204 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:54.233 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:54.268 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:54.290 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:41:55.819 Error in Select OPC Endpoint : BadRequestTimeout
+23:41:55.842 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:09.260 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:09.288 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:09.326 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:42:09.348 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:10.870 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:10.894 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:24.318 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:24.348 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:24.369 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:42:24.389 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:25.924 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:42:25.956 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:39.368 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:39.397 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:39.414 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:42:39.438 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:40.984 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:41.017 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:54.426 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:54.451 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:54.467 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:54.486 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:42:56.044 Error in Select OPC Endpoint : BadRequestTimeout
+23:42:56.065 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:09.492 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:09.524 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:09.531 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:09.557 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:11.092 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:11.111 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:24.557 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:24.593 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:24.599 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:24.618 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:26.140 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:26.160 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:39.624 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:39.638 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:39.659 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:39.677 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:41.185 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:41.204 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:54.721 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:54.722 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:54.745 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:54.760 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:43:56.226 Error in Select OPC Endpoint : BadRequestTimeout
+23:43:56.246 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:09.794 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:09.800 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:09.826 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:09.842 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:11.278 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:11.300 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:24.879 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:44:24.921 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:24.937 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:26.328 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:26.347 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:39.967 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:40.014 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:40.030 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:41.382 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:41.411 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:55.065 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:55.070 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:44:55.118 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:55.136 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:44:56.437 Error in Select OPC Endpoint : BadRequestTimeout
+23:44:56.468 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:10.175 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:10.233 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:11.490 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:11.510 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:25.289 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:25.334 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:25.350 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:26.536 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:26.564 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:40.380 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:40.429 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:40.436 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:41.590 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:41.611 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:55.458 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:55.494 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:55.511 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:45:56.643 Error in Select OPC Endpoint : BadRequestTimeout
+23:45:56.665 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:10.537 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:10.577 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:10.593 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:11.687 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:11.707 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:25.633 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:25.671 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:25.688 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:26.737 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:26.758 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:40.730 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:40.730 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:40.755 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:40.775 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:41.792 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:41.817 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:55.807 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:55.815 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:55.837 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:55.854 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:46:56.843 Error in Select OPC Endpoint : BadRequestTimeout
+23:46:56.864 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:10.881 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:10.896 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:10.918 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:10.936 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:11.890 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:11.909 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:25.976 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:26.021 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:26.039 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:26.931 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:26.951 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:41.068 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:41.074 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:41.096 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:41.113 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:41.977 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:41.996 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:56.153 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:56.195 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:56.211 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:47:57.019 Error in Select OPC Endpoint : BadRequestTimeout
+23:47:57.038 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:11.248 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:11.300 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:12.058 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:12.080 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:26.335 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:26.353 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:26.372 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:26.394 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:27.115 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:27.135 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:41.407 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:41.427 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:41.446 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:41.466 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:42.165 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:42.183 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:56.497 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:56.541 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:56.588 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:48:57.213 Error in Select OPC Endpoint : BadRequestTimeout
+23:48:57.235 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:11.626 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:49:11.671 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:11.680 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:12.266 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:12.287 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:26.708 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:26.750 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:26.767 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:27.306 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:27.329 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:41.797 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:41.823 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:42.355 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:42.374 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:56.845 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:56.866 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:49:57.404 Error in Select OPC Endpoint : BadRequestTimeout
+23:49:57.425 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:11.895 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:11.923 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:12.454 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:12.473 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:26.956 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:27.000 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:27.498 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:27.516 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:42.020 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:42.062 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:42.546 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:42.565 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:57.083 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:57.105 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:50:57.594 Error in Select OPC Endpoint : BadRequestTimeout
+23:50:57.613 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:12.134 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:12.160 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:12.632 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:12.651 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:27.194 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:27.216 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:27.677 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:27.698 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:42.241 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:42.263 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:42.720 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:42.739 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:57.292 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:57.317 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:51:57.778 Error in Select OPC Endpoint : BadRequestTimeout
+23:51:57.801 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:12.346 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:12.369 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:12.834 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:12.857 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:27.399 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:27.420 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:27.880 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:27.903 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:42.453 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:42.483 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:42.931 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:42.951 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:57.503 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:57.530 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:52:57.980 Error in Select OPC Endpoint : BadRequestTimeout
+23:52:57.999 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:12.560 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:12.583 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:13.024 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:13.046 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:27.604 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:27.634 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:28.072 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:28.091 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:42.673 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:42.697 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:43.121 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:43.157 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:57.717 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:57.738 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:53:58.181 Error in Select OPC Endpoint : BadRequestTimeout
+23:53:58.202 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:12.770 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:12.791 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:13.225 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:13.245 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:27.812 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:27.835 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:28.266 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:28.286 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:42.852 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:42.872 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:43.309 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:43.328 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:57.895 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:57.917 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:54:58.362 Error in Select OPC Endpoint : BadRequestTimeout
+23:54:58.383 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:12.950 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:12.978 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:13.417 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:13.439 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:28.011 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:28.037 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:28.459 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:28.480 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:43.068 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:43.095 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:43.505 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:43.525 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:58.123 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:55:58.146 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:55:58.552 Error in Select OPC Endpoint : BadRequestTimeout
+23:55:58.573 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:13.175 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:13.200 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:13.594 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:13.613 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:28.233 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:28.255 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:28.637 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:28.662 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:43.275 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:43.297 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:43.693 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:43.713 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:58.324 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:58.343 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:56:58.747 Error in Select OPC Endpoint : BadRequestTimeout
+23:56:58.770 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:13.373 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:13.396 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:13.796 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:13.819 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:28.420 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:28.444 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:28.842 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:28.862 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:43.471 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:43.492 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:43.884 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:43.912 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:58.515 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:58.542 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:57:58.948 Error in Select OPC Endpoint : BadRequestTimeout
+23:57:58.970 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:13.570 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:13.593 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:14.002 Error in Select OPC Endpoint : Error establishing a connection: BadRequestTimeout
+23:58:14.022 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:28.620 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:28.644 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:29.061 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:29.082 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:43.669 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:43.692 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:44.101 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:44.120 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:58.713 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:58.736 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:58:59.145 Error in Select OPC Endpoint : BadRequestTimeout
+23:58:59.168 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:13.758 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:13.787 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:14.196 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:14.215 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:28.819 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:28.842 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:29.238 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:29.257 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:43.869 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:43.895 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:44.286 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:44.306 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:58.920 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:58.942 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
+23:59:59.338 Error in Select OPC Endpoint : BadRequestTimeout
+23:59:59.358 Error in Build Session for Connection : Value cannot be null. (Parameter 'uriString')
