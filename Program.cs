@@ -19,13 +19,13 @@ namespace Middleware
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((context, config) =>
                 {
-                    var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    var basePath = Directory.GetCurrentDirectory();
                     config.SetBasePath(basePath)
                         .AddJsonFile("appsetting.json", optional: false, reloadOnChange: true);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    var basePath = Directory.GetCurrentDirectory();
                     var configuration = new ConfigurationBuilder()
                         .SetBasePath(basePath)
                         .AddJsonFile("appsetting.json")
