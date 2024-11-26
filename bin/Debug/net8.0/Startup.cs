@@ -51,6 +51,10 @@ namespace Middleware
             services.AddSingleton<TaskSyncService>();
             if (selectedConfig.EndpointType == "TCP")
             {
+                if (selectedConfig.RobotName == "Robco 2")
+                {
+                    BLLServer.setDeviceAddress(selectedConfig.DeviceIp, selectedConfig.DevicePort, "api/task");
+                }
                 services.AddHostedService<TCPServerService>();
 
             }
@@ -61,6 +65,7 @@ namespace Middleware
             else if (selectedConfig.EndpointType == "API")
             {
                 AMRTaskMapping.amrTaskMapping = JsonSerializer.Deserialize<Dictionary<string, TaskMapping>>(File.ReadAllText("AGVTaskList.json"));
+                BLLServer.setDeviceAddress(selectedConfig.DeviceIp, selectedConfig.DevicePort, "api/fexa/");
                 services.AddHostedService<AMRServerService>();
             }
             else if (selectedConfig.EndpointType == "Magazine")
@@ -88,7 +93,6 @@ namespace Middleware
             BLLServer.SetBaseAddress(selectedConfig.MESIP, selectedConfig.MESPort);
             BLLServer.SetBearerToken(selectedConfig.MESToken);
             BLLServer.SetMESTimeOut(selectedConfig.MESRequestTimeOut);
-            BLLServer.setDeviceAddress(selectedConfig.DeviceIp, selectedConfig.DevicePort, "api/fexa/");
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {

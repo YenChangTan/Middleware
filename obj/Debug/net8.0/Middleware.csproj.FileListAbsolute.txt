@@ -4,6 +4,10 @@ C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotM
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.AssemblyInfo.cs
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\RobotMiddleware\Middleware\obj\Debug\net8.0\Middleware.csproj.CoreCompileInputs.cache
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Middleware.exe
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Startup.cs
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\AGVTaskList.json
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\appsetting.json
+C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Opcsetting.xml
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Middleware.deps.json
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Middleware.runtimeconfig.json
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Middleware.dll
@@ -40,7 +44,3 @@ C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middle
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\obj\Debug\net8.0\Middleware.pdb
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\obj\Debug\net8.0\Middleware.genruntimeconfig.cache
 C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\obj\Debug\net8.0\ref\Middleware.dll
-C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\appsetting.json
-C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\AGVTaskList.json
-C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Opcsetting.xml
-C:\Users\SiP-YCTan\OneDrive - SIP Technology (M) Sdn Bhd\Documents\GitHub\Middleware\Middleware\bin\Debug\net8.0\Startup.cs

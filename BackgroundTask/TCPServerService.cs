@@ -281,6 +281,18 @@ namespace Middleware.BackgroundTask
                                     case (byte)'0'://Free
                                         Status = "Free";
                                         updateMachineStatusResult = await server.UpdateMachineStatus(_modeConfiguration.RobotName, "Free");
+                                        if (_modeConfiguration.RobotName == "Robco 2")
+                                        {
+                                            try// this section is use for station 
+                                            {
+                                                _taskSyncService.ProceedTaskSource.TrySetResult(true);
+                                            }
+                                            finally
+                                            {
+                                                _taskSyncService.Reset();
+                                            }
+                                        }
+                                        
                                         //if (updateMachineStatusResult == 1)
                                         //{
                                         //    Array.Copy(buffer, byteToSend, DataLength);
@@ -367,6 +379,19 @@ namespace Middleware.BackgroundTask
                                 else
                                 {
                                     await stream.WriteAsync(Encoding.ASCII.GetBytes("DATAERR"));
+                                }
+                            }
+                            else if (Encoding.ASCII.GetString(buffer, 0, DataLength) == "CANWORK")
+                            {
+                                if (isRobcoStation1CanWork.canWork)
+                                {
+                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("CANWORK"));
+                                }
+                                else
+                                {
+                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("NOTWORK"));
+                                    var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task);
+                                    await stream.WriteAsync(Encoding.ASCII.GetBytes("CANWORK"));
                                 }
                             }
                             else

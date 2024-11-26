@@ -1,26 +1,20 @@
 {
-  "SelectedModeId": "12",
-  "ApplicationUrl": "http://0.0.0.0:4859",
+  "SelectedModeId": "1",
+  "ApplicationUrl": "http://0.0.0.0:4862",
   "ModeConfigurations": [
     {
       "ModeId": "1",
       "RobotName": "Magazine Loader",
       "SelfAPIPort": "4862",
       "EndpointType": "Magazine",
-      "Clients": [
-        {
-          "IP": "192.168.1.200",
-          "Port": "123"
-        }
-      ],
       "Server": [
         {
-          "IP": "192.168.1.200",
-          "Port": "123"
+          "IP": "127.0.0.1",
+          "Port": "4081"
         }
       ],
-      "MESIP": "192.168.1.188",
-      "MESPort": "82",
+      "MESIP": "127.0.0.1",
+      "MESPort": "8080",
       "MESToken": "1GmoRf8g5ocanZ6X2KyvePuUZVk9oIaF3n5MKMreA5ZP1isCj+e6SOeeEb4TcsPC",
       "MESRequestTimeOut": "3000",
       "TimeOut": "5000"
@@ -67,6 +61,8 @@
       "MESIP": "192.168.3.111",
       "MESPort": "82",
       "MESToken": "LXwUxRqaCQ+lNbrTxyfn2yYVys0TCkJNFFICULVnIdCRGHsx1j0vIGpkNxBZDekF",
+      "DeviceIp": "192.168.1.110",
+      "DevicePort": "30381",
       "MESRequestTimeOut": "3000"
     },
     {

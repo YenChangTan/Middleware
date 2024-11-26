@@ -3,40 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\opcclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\opcclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\fundamental\\tcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:fundamental\\tcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\fundamental\\opcua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:fundamental\\opcua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\bllserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\bllserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\workflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\workflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\tcpserverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\tcpserverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\magazineloaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\magazineloaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\bllserverforopc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\bllserverforopc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\fundamental\\tcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:fundamental\\tcp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\appsetting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:appsetting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\bllserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\bllserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\station1amr\\station1amrpostreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\station1amr\\station1amrpostreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\tcpserverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\tcpserverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\station1amr\\station1amrpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\station1amr\\station1amrpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\dataholder\\isrobcostation1canwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:dataholder\\isrobcostation1canwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\tasksyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:tasksyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\machinestatusupdateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\machinestatusupdateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\opcclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\opcclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\fundamental\\opcua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:fundamental\\opcua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\bllserverforopc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\bllserverforopc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,16 +75,8 @@
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\traynpcb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\backgroundtask\\magazineloaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:backgroundtask\\magazineloaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\machinestatusupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\machinestatusupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\controller\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:controller\\apicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -143,16 +163,8 @@
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\amr\\createtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\machinestatusupdateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\machinestatusupdateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\amr\\reportcarstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:model\\amr\\reportcarstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\tasksyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|solutionrelative:tasksyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F4331D4-248E-405D-A58B-C4E3811BDF08}|Middleware.csproj|c:\\users\\sip-yctan\\onedrive - sip technology (m) sdn bhd\\documents\\github\\middleware\\middleware\\model\\amr\\createtaskreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -213,9 +225,23 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 453,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 383,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BLLServer.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServer.cs",
+              "RelativeDocumentMoniker": "Controller\\BLLServer.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServer.cs",
+              "RelativeToolTip": "Controller\\BLLServer.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAkwIQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T02:04:31.959Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{605322a2-17ae-43f4-b60f-766556e46c87}"
@@ -230,33 +256,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OPCClientService.cs",
-              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\OPCClientService.cs",
-              "RelativeDocumentMoniker": "BackgroundTask\\OPCClientService.cs",
-              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\OPCClientService.cs",
-              "RelativeToolTip": "BackgroundTask\\OPCClientService.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAwwFMAAAAqAAAA",
+              "DocumentIndex": 6,
+              "Title": "Station1AMRPostReturn.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\Station1AMR\\Station1AMRPostReturn.cs",
+              "RelativeDocumentMoniker": "Model\\Station1AMR\\Station1AMRPostReturn.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\Station1AMR\\Station1AMRPostReturn.cs",
+              "RelativeToolTip": "Model\\Station1AMR\\Station1AMRPostReturn.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T01:55:51.557Z",
+              "WhenOpened": "2024-11-26T02:24:42.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
+              "Title": "Station1AMRPost.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\Station1AMR\\Station1AMRPost.cs",
+              "RelativeDocumentMoniker": "Model\\Station1AMR\\Station1AMRPost.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\Station1AMR\\Station1AMRPost.cs",
+              "RelativeToolTip": "Model\\Station1AMR\\Station1AMRPost.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T02:10:31.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkflowController.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
+              "RelativeDocumentMoniker": "Controller\\WorkflowController.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
+              "RelativeToolTip": "Controller\\WorkflowController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAwwH4AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T02:23:40.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "TCPServerService.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPServerService.cs",
               "RelativeDocumentMoniker": "BackgroundTask\\TCPServerService.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPServerService.cs",
               "RelativeToolTip": "BackgroundTask\\TCPServerService.cs",
-              "ViewState": "AQIAAFUBAAAAAAAAAAAAwGYBAABsAAAA",
+              "ViewState": "AQIAAHkBAAAAAAAAAAAAwIEBAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T00:38:31.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
+              "Title": "isRobcoStation1CanWork.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\isRobcoStation1CanWork.cs",
+              "RelativeDocumentMoniker": "DataHolder\\isRobcoStation1CanWork.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\isRobcoStation1CanWork.cs",
+              "RelativeToolTip": "DataHolder\\isRobcoStation1CanWork.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAIwAoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T01:05:38.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OPCClientService.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\OPCClientService.cs",
+              "RelativeDocumentMoniker": "BackgroundTask\\OPCClientService.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\OPCClientService.cs",
+              "RelativeToolTip": "BackgroundTask\\OPCClientService.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAwwFMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T01:55:51.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -264,25 +341,37 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T15:29:48.91Z",
+              "WhenOpened": "2024-11-22T15:29:48.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TCP.cs",
+              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Fundamental\\TCP.cs",
+              "RelativeDocumentMoniker": "Fundamental\\TCP.cs",
+              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Fundamental\\TCP.cs",
+              "RelativeToolTip": "Fundamental\\TCP.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAswHEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T09:06:29.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "APIController.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\APIController.cs",
               "RelativeDocumentMoniker": "Controller\\APIController.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\APIController.cs",
               "RelativeToolTip": "Controller\\APIController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACoAAAB+AAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAowLIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T10:43:18.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "MachineStatusUpdate.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\MachineStatusUpdate.cs",
               "RelativeDocumentMoniker": "Model\\MachineStatusUpdate.cs",
@@ -290,38 +379,24 @@
               "RelativeToolTip": "Model\\MachineStatusUpdate.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAABkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T01:15:53.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T01:15:53.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BLLServer.cs",
-              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServer.cs",
-              "RelativeDocumentMoniker": "Controller\\BLLServer.cs",
-              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServer.cs",
-              "RelativeToolTip": "Controller\\BLLServer.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAvwF8AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T02:04:31.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "MagazineLoaderService.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\MagazineLoaderService.cs",
               "RelativeDocumentMoniker": "BackgroundTask\\MagazineLoaderService.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\MagazineLoaderService.cs",
               "RelativeToolTip": "BackgroundTask\\MagazineLoaderService.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAiwE0AAAAdAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwC8AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T14:22:22.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "TrayNPCB.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\TrayNPCB.cs",
               "RelativeDocumentMoniker": "Model\\TrayNPCB.cs",
@@ -329,12 +404,11 @@
               "RelativeToolTip": "Model\\TrayNPCB.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T09:19:40.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T09:19:40.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "Logger.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Logger.cs",
               "RelativeDocumentMoniker": "Logger.cs",
@@ -342,12 +416,11 @@
               "RelativeToolTip": "Logger.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAwDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T16:15:47.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T16:15:47.04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "OPCUA.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Fundamental\\OPCUA.cs",
               "RelativeDocumentMoniker": "Fundamental\\OPCUA.cs",
@@ -355,25 +428,24 @@
               "RelativeToolTip": "Fundamental\\OPCUA.cs",
               "ViewState": "AQIAAEEAAAAAAAAAAAAgwCQAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:13:49.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:13:49.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "appsetting.json",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\appsetting.json",
               "RelativeDocumentMoniker": "appsetting.json",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\appsetting.json",
               "RelativeToolTip": "appsetting.json",
-              "ViewState": "AQIAAPwAAAAAAAAAAAAuwBQBAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-24T08:44:25.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "IFMOPCClientService.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\IFMOPCClientService.cs",
               "RelativeDocumentMoniker": "BackgroundTask\\IFMOPCClientService.cs",
@@ -381,12 +453,11 @@
               "RelativeToolTip": "BackgroundTask\\IFMOPCClientService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:37:01.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T08:37:01.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "HomingDone.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\HomingDone.cs",
               "RelativeDocumentMoniker": "DataHolder\\HomingDone.cs",
@@ -394,12 +465,11 @@
               "RelativeToolTip": "DataHolder\\HomingDone.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:20:10.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T06:20:10.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "ModeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\ModeConfiguration.cs",
               "RelativeDocumentMoniker": "Model\\ModeConfiguration.cs",
@@ -407,12 +477,11 @@
               "RelativeToolTip": "Model\\ModeConfiguration.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAAA4AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T00:38:36.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T00:38:36.686Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "TrayNPCBData.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\TrayNPCBData.cs",
               "RelativeDocumentMoniker": "DataHolder\\TrayNPCBData.cs",
@@ -420,12 +489,11 @@
               "RelativeToolTip": "DataHolder\\TrayNPCBData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T09:22:16.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T09:22:16.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "OPCController.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\OPCController.cs",
               "RelativeDocumentMoniker": "Controller\\OPCController.cs",
@@ -433,25 +501,11 @@
               "RelativeToolTip": "Controller\\OPCController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T03:54:44.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T03:54:44.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WorkflowController.cs",
-              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
-              "RelativeDocumentMoniker": "Controller\\WorkflowController.cs",
-              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
-              "RelativeToolTip": "Controller\\WorkflowController.cs",
-              "ViewState": "AQIAAEECAAAAAAAAAADwv0sCAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T02:23:40.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "TCPClientService.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\TCPClientService.cs",
               "RelativeDocumentMoniker": "BackgroundTask\\TCPClientService.cs",
@@ -459,12 +513,11 @@
               "RelativeToolTip": "BackgroundTask\\TCPClientService.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAxwCAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T08:57:33.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T08:57:33.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "BLLServerForOPC.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServerForOPC.cs",
               "RelativeDocumentMoniker": "Controller\\BLLServerForOPC.cs",
@@ -472,12 +525,11 @@
               "RelativeToolTip": "Controller\\BLLServerForOPC.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T05:59:07.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T05:59:07.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\APIControllerModel\\Result.cs",
               "RelativeDocumentMoniker": "Model\\APIControllerModel\\Result.cs",
@@ -489,20 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TCP.cs",
-              "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Fundamental\\TCP.cs",
-              "RelativeDocumentMoniker": "Fundamental\\TCP.cs",
-              "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Fundamental\\TCP.cs",
-              "RelativeToolTip": "Fundamental\\TCP.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:06:29.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "OPCConnection.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\OPCConnection.cs",
               "RelativeDocumentMoniker": "DataHolder\\OPCConnection.cs",
@@ -514,20 +553,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Startup.cs",
               "RelativeDocumentMoniker": "Startup.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Startup.cs",
               "RelativeToolTip": "Startup.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwDAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T10:25:37.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "AMRServerService.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\BackgroundTask\\AMRServerService.cs",
               "RelativeDocumentMoniker": "BackgroundTask\\AMRServerService.cs",
@@ -539,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "Opcsetting.xml",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Opcsetting.xml",
               "RelativeDocumentMoniker": "Opcsetting.xml",
@@ -551,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "OPCdriver.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\OPC\\OPCdriver.cs",
               "RelativeDocumentMoniker": "Model\\OPC\\OPCdriver.cs",
@@ -563,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "Network.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\Network.cs",
               "RelativeDocumentMoniker": "Model\\Network.cs",
@@ -575,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "MESPost.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\MESPost.cs",
               "RelativeDocumentMoniker": "Model\\MESPost.cs",
@@ -587,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "ReportTaskStatus.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\ReportTaskStatus.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\ReportTaskStatus.cs",
@@ -599,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "LoaderReport.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\LoaderReport.cs",
               "RelativeDocumentMoniker": "Model\\LoaderReport.cs",
@@ -611,19 +650,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 10,
               "Title": "TaskSyncService.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\TaskSyncService.cs",
               "RelativeDocumentMoniker": "TaskSyncService.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\TaskSyncService.cs",
               "RelativeToolTip": "TaskSyncService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:14:01.721Z"
+              "WhenOpened": "2024-11-21T12:14:01.721Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "CreateTaskReturn.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\CreateTaskReturn.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\CreateTaskReturn.cs",
@@ -635,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\Car.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\Car.cs",
@@ -647,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "CreateTaskData.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\CreateTaskData.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\CreateTaskData.cs",
@@ -659,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "CreateTask.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\CreateTask.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\CreateTask.cs",
@@ -671,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "AGVTaskList.txt",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\AGVTaskList.txt",
               "RelativeDocumentMoniker": "AGVTaskList.txt",
@@ -683,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 11,
               "Title": "MachineStatusUpdateResult.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\MachineStatusUpdateResult.cs",
               "RelativeDocumentMoniker": "Model\\MachineStatusUpdateResult.cs",
@@ -691,11 +731,12 @@
               "RelativeToolTip": "Model\\MachineStatusUpdateResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T04:13:58.696Z"
+              "WhenOpened": "2024-11-21T04:13:58.696Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "appsetting.txt",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\appsetting.txt",
               "RelativeDocumentMoniker": "appsetting.txt",
@@ -707,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "ReportCarStatus.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\ReportCarStatus.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\ReportCarStatus.cs",
@@ -719,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "ReportCarStatusDoTask.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\ReportCarStatusDoTask.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\ReportCarStatusDoTask.cs",
@@ -731,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "TaskInfo.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\TaskInfo.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\TaskInfo.cs",
@@ -743,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "AGVTaskList.json",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\AGVTaskList.json",
               "RelativeDocumentMoniker": "AGVTaskList.json",
@@ -755,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "SubTaskInfo.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\SubTaskInfo.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\SubTaskInfo.cs",
@@ -767,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "TaskMapping.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\TaskMapping.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\TaskMapping.cs",
@@ -779,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "AMRTaskMapping.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\AMRTaskMapping.cs",
               "RelativeDocumentMoniker": "DataHolder\\AMRTaskMapping.cs",
@@ -791,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "AMRTaskList.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\AMRTaskList.cs",
               "RelativeDocumentMoniker": "DataHolder\\AMRTaskList.cs",
@@ -803,7 +844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "PCBStatusRequest.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\PCBStatusRequest.cs",
               "RelativeDocumentMoniker": "Model\\PCBStatusRequest.cs",
@@ -815,7 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "PCBStatusResult.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\PCBStatusResult.cs",
               "RelativeDocumentMoniker": "Model\\PCBStatusResult.cs",
@@ -827,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "LoaderReportData.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\DataHolder\\LoaderReportData.cs",
               "RelativeDocumentMoniker": "DataHolder\\LoaderReportData.cs",
@@ -839,7 +880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "ThingsId.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\AMR\\ThingsId.cs",
               "RelativeDocumentMoniker": "Model\\AMR\\ThingsId.cs",
@@ -851,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "JresultModel.cs",
               "DocumentMoniker": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Model\\JresultModel.cs",
               "RelativeDocumentMoniker": "Model\\JresultModel.cs",

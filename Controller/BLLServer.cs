@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Middleware.DataHolder;
 using Microsoft.Extensions.Logging;
+using Middleware.Model.Station1AMR;
 
 namespace Middleware.Controller
 {
@@ -153,7 +154,7 @@ namespace Middleware.Controller
             }
         }
 
-        public async Task<int> UpdateMagazineTimeStamp(DateTime dateTime)
+        public async Task<int> UpdateMagazineTimeStamp(DateTime dateTime)//Magazine Loader
         {
             string urlEndpoint = $"{baseAddress}api/Workflow";
             MachineStatusUpdate machineStatusUpdate = new MachineStatusUpdate();
@@ -166,7 +167,7 @@ namespace Middleware.Controller
                 HttpResponseMessage response = await MESClient.PostAsync(urlEndpoint, content);
                 if (!response.IsSuccessStatusCode)
                 {
-                    Logger.LogMessage($"api request fail {response.StatusCode}", "error");
+                    Logger.LogMessage($"update timestamp fail {response.StatusCode}", "error");
                     return 0; //request fail, data corrupted.
                 }
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -174,17 +175,18 @@ namespace Middleware.Controller
                 machineStatusUpdateResult = JsonConvert.DeserializeObject<MachineStatusUpdateResult>(responseBody);
                 if (machineStatusUpdateResult.HasResult)
                 {
+                    Logger.LogMessage("timestamp updated", "api");
                     return 1;
                 }
                 else
                 {
-                    Logger.LogMessage("api request fail", "error");
+                    Logger.LogMessage("update timestamp fail", "error");
                     return 0; //Not sure how to define this scenario, update unsuccessfully?
                 }
             }
             catch (Exception ex)
             {
-                Logger.LogMessage(ex.ToString(), "error");
+                Logger.LogMessage("update timestamp fail"+ ex.ToString(), "error");
                 return 0;
             }
         }
@@ -211,7 +213,7 @@ namespace Middleware.Controller
                 machineStatusUpdateResult = JsonConvert.DeserializeObject<MachineStatusUpdateResult>(responseBody);
                 if (machineStatusUpdateResult.HasResult)
                 {
-                    Logger.LogMessage("update report successfully", "api");
+                    Logger.LogMessage("report updated", "api");
                     return 1;
                 }
                 else
@@ -227,7 +229,7 @@ namespace Middleware.Controller
             }
         }
 
-        public async Task<int> createAGVTask(CreateTask createTask)
+        public async Task<int> createAGVTask(CreateTask createTask)//post to agv
         {
             string urlEndpoint = $"{deviceAddress}v1/external/dispatch/createTask";
             try
@@ -274,7 +276,7 @@ namespace Middleware.Controller
             }
         }
 
-        public async Task<int> CheckAGVTaskStatus(string orderId)
+        public async Task<int> CheckAGVTaskStatus(string orderId)//post to agv.
         {
             try
             {
@@ -297,6 +299,66 @@ namespace Middleware.Controller
                 else
                 {
                     return 2;//task not done
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public async Task<int> CallAMRGoToSpot()
+        {
+            try
+            {
+                Station1AMRPost station1AMRPost = new Station1AMRPost();
+                station1AMRPost.Task = "GOSLOWASSEMBLYLINEFRONT";
+                string urlEndpoint = $"{deviceAddress}";
+                string jsonData = JsonConvert.SerializeObject(station1AMRPost);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await deviceClient.PostAsync(urlEndpoint,content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    return 0; //request fail, data corrupted.
+                }
+                string responseBody = await response.Content.ReadAsStringAsync();
+                Station1AMRPostReturn station1AMRPostReturn = JsonConvert.DeserializeObject<Station1AMRPostReturn>(responseBody);
+                if (station1AMRPostReturn.Status == "Success")
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public async Task<int> CallAMRTakePlateStation1()
+        {
+            try
+            {
+                Station1AMRPost station1AMRPost = new Station1AMRPost();
+                station1AMRPost.Task = "PICKPALLETFRONT";
+                string urlEndpoint = $"{deviceAddress}";
+                string jsonData = JsonConvert.SerializeObject(station1AMRPost);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await deviceClient.PostAsync(urlEndpoint, content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    return 0; //request fail, data corrupted.
+                }
+                string responseBody = await response.Content.ReadAsStringAsync();
+                Station1AMRPostReturn station1AMRPostReturn = JsonConvert.DeserializeObject<Station1AMRPostReturn>(responseBody);
+                if (station1AMRPostReturn.Status == "Success")
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
                 }
             }
             catch (Exception ex)

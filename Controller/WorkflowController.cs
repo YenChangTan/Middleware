@@ -124,6 +124,7 @@ namespace Middleware.Controller
                         try
                         {
                             _taskSyncService.ProceedTaskSource.TrySetResult(true);
+                            isRobcoStation1CanWork.canWork = true;
                         }
                         finally
                         {
@@ -190,6 +191,41 @@ namespace Middleware.Controller
                         }
                         result.HasResult = true;
                         return Ok(result);
+                    }
+                    else if (mesPost.TaskID == "Take Tray")
+                    {
+                        BLLServer bllServer = new BLLServer();
+                        if (bllServer.previousStatus == "Busy")
+                        {
+
+                            //wait untill previous status is not busy and need to call yongwei amr side do work.
+                            var completedTask = await Task.WhenAny(_taskSyncService.ProceedTaskSource.Task);
+                            result.HasResult = true;
+                            return Ok(result);
+                        }
+                        else if (bllServer.previousStatus == "Free")
+                        {
+                            isRobcoStation1CanWork.canWork = false;
+                            if ( (await bllServer.CallAMRTakePlateStation1()) == 1)
+                            {
+                                
+                                result.HasResult = true;
+                                return Ok(result);
+                            }
+                            else
+                            {
+                                isRobcoStation1CanWork.canWork = true;
+                                result.HasResult = false;
+                                return Ok(result);
+                                
+                            }
+                        }
+                        else
+                        {
+                            result.HasResult = false;
+                            result.Message="Robco in Error State";
+                            return Ok(result);
+                        }
                     }
                     else
                     {

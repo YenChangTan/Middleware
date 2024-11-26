@@ -24,11 +24,9 @@ namespace Middleware.BackgroundTask
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            Console.WriteLine("run here");
             int resultCode = 0;
             bool MagazineCounter = false;
             BLLServer server = new BLLServer();
-            Console.WriteLine("Cancel");
             while (!stoppingToken.IsCancellationRequested)
             {
                 try
@@ -37,16 +35,17 @@ namespace Middleware.BackgroundTask
                     Console.WriteLine(_modeConfiguration.Server.First().Port);
                     while (!_tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().Port.ToString()))
                     {
-                        Console.WriteLine("reconnecting");
+                        Logger.LogMessage("Fail to connect, reconnecting", "error");
                     }
 
                     while (true)
                     {
                         resultCode = 0;
                         resultCode = await _tcp.ReceiveFromMagazineLoader();
-                        Console.WriteLine($" resultcode is {resultCode}");
+                        
                         if (resultCode == 1)
                         {
+                            Logger.LogMessage("11", "TCP");
                             DateTime Now = DateTime.Now;
                             LoaderReportData.loaderReport.TimeStamp.Add(Now);
                             await Task.Run(async () =>
@@ -59,8 +58,7 @@ namespace Middleware.BackgroundTask
                         }
                         else if (resultCode == 2)
                         {
-
-                            
+                            Logger.LogMessage("GJ", "TCP");
                             if (MagazineCounter == true)
                             {
                                 LoaderReportData.loaderReport.MagazineId = "SIPMGZ001";
@@ -88,6 +86,7 @@ namespace Middleware.BackgroundTask
                         }
                         else if (resultCode == 3)
                         {
+                            Logger.LogMessage("Connection is aborted", "error");
                             break;
                         }
                         else
@@ -98,6 +97,7 @@ namespace Middleware.BackgroundTask
                 }
                 catch (Exception ex)
                 {
+                    Logger.LogMessage("Unexpected error happen", "error");
                     Console.WriteLine(ex.ToString());
                 }
             }
