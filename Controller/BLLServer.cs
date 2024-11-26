@@ -149,7 +149,7 @@ namespace Middleware.Controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.Message);
                 return 0;//request fail, data corrupted.
             }
         }
@@ -186,7 +186,7 @@ namespace Middleware.Controller
             }
             catch (Exception ex)
             {
-                Logger.LogMessage("update timestamp fail"+ ex.ToString(), "error");
+                Logger.LogMessage("update timestamp fail"+ ex.Message, "error");
                 return 0;
             }
         }
@@ -224,7 +224,7 @@ namespace Middleware.Controller
             }
             catch (Exception ex)
             {
-                Logger.LogMessage($"update report fail {ex.ToString()}", "error");
+                Logger.LogMessage($"update report fail {ex.Message}", "error");
                 return 0;//request fail, data corrupted.
             }
         }
@@ -271,7 +271,7 @@ namespace Middleware.Controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.Message);
                 return 0;
             }
         }

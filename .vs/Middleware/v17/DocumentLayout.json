@@ -236,7 +236,7 @@
               "RelativeDocumentMoniker": "Controller\\BLLServer.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\BLLServer.cs",
               "RelativeToolTip": "Controller\\BLLServer.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAkwIQAAAAKAAAA",
+              "ViewState": "AQIAAEIBAAAAAAAAAAAuwA4BAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T02:04:31.959Z",
               "IsPinned": true,
@@ -264,8 +264,7 @@
               "RelativeToolTip": "Model\\Station1AMR\\Station1AMRPostReturn.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAqwAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T02:24:42.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T02:24:42.892Z"
             },
             {
               "$type": "Document",
@@ -277,8 +276,7 @@
               "RelativeToolTip": "Model\\Station1AMR\\Station1AMRPost.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAAA0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T02:10:31.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T02:10:31.679Z"
             },
             {
               "$type": "Document",
@@ -288,7 +286,7 @@
               "RelativeDocumentMoniker": "Controller\\WorkflowController.cs",
               "ToolTip": "C:\\Users\\SiP-YCTan\\OneDrive - SIP Technology (M) Sdn Bhd\\Documents\\GitHub\\Middleware\\Middleware\\Controller\\WorkflowController.cs",
               "RelativeToolTip": "Controller\\WorkflowController.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAwwH4AAABCAAAA",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAwwH4AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T02:23:40.383Z",
               "EditorCaption": ""
@@ -303,8 +301,7 @@
               "RelativeToolTip": "BackgroundTask\\TCPServerService.cs",
               "ViewState": "AQIAAHkBAAAAAAAAAAAAwIEBAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T00:38:31.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T00:38:31.645Z"
             },
             {
               "$type": "Document",
@@ -316,8 +313,7 @@
               "RelativeToolTip": "DataHolder\\isRobcoStation1CanWork.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAIwAoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T01:05:38.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T01:05:38.506Z"
             },
             {
               "$type": "Document",
@@ -353,8 +349,7 @@
               "RelativeToolTip": "Fundamental\\TCP.cs",
               "ViewState": "AQIAAIAAAAAAAAAAAAAswHEAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:06:29.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T09:06:29.268Z"
             },
             {
               "$type": "Document",
@@ -366,8 +361,7 @@
               "RelativeToolTip": "Controller\\APIController.cs",
               "ViewState": "AQIAAFEAAAAAAAAAAAAowLIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T10:43:18.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T10:43:18.335Z"
             },
             {
               "$type": "Document",
@@ -391,8 +385,7 @@
               "RelativeToolTip": "BackgroundTask\\MagazineLoaderService.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAYwC8AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:22:22.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T14:22:22.591Z"
             },
             {
               "$type": "Document",
@@ -440,8 +433,7 @@
               "RelativeToolTip": "appsetting.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-24T08:44:25.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T08:44:25.436Z"
             },
             {
               "$type": "Document",
@@ -561,8 +553,7 @@
               "RelativeToolTip": "Startup.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAYwDAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T10:25:37.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T10:25:37.89Z"
             },
             {
               "$type": "Document",
@@ -658,8 +649,7 @@
               "RelativeToolTip": "TaskSyncService.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:14:01.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:14:01.721Z"
             },
             {
               "$type": "Document",
@@ -731,8 +721,7 @@
               "RelativeToolTip": "Model\\MachineStatusUpdateResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T04:13:58.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T04:13:58.696Z"
             },
             {
               "$type": "Document",
