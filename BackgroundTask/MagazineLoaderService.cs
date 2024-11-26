@@ -27,7 +27,7 @@ namespace Middleware.BackgroundTask
             int resultCode = 0;
             bool MagazineCounter = false;
             BLLServer server = new BLLServer();
-            while (!stoppingToken.IsCancellationRequested)
+            while (true)
             {
                 try
                 {
@@ -35,7 +35,7 @@ namespace Middleware.BackgroundTask
                     {
                         
                         Logger.LogMessage("Fail to connect, reconnecting", "error");
-                        await Task.Delay(5000);
+                        await Task.Delay(1000);
                     }
 
                     while (true)
@@ -91,7 +91,7 @@ namespace Middleware.BackgroundTask
                         }
                         else
                         {
-                            continue;
+                            break;
                         }
                     }
                 }

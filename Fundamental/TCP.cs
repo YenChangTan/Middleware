@@ -112,8 +112,7 @@ namespace Middleware.Fundamental
                 byte[] buffer = new byte[1024];
                 sock.ReceiveTimeout = 0;
                 int bytesRead = await sock.ReceiveAsync(buffer);
-                var cts = new CancellationTokenSource();
-                CancellationToken token = cts.Token;
+                
                 if (Encoding.ASCII.GetString(buffer, 0, bytesRead).Contains("11"))
                 {
                     sock.ReceiveTimeout = 20;
@@ -157,7 +156,7 @@ namespace Middleware.Fundamental
             }
             catch(Exception ex)
             {
-                return 0;
+                return 3;
             }
         }
 

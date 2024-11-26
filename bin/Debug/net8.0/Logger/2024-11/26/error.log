@@ -49,3 +49,28 @@
 14:57:06.829 Fail to connect, reconnecting
 15:29:06.748 Fail to connect, reconnecting
 15:29:58.065 Fail to connect, reconnecting
+15:58:04.737 Fail to connect, reconnecting
+16:00:59.007 Fail to connect, reconnecting
+16:01:35.515 Fail to connect, reconnecting
+16:01:42.604 Fail to connect, reconnecting
+16:01:49.678 Fail to connect, reconnecting
+16:01:56.745 Fail to connect, reconnecting
+16:02:03.827 Fail to connect, reconnecting
+16:02:10.891 Fail to connect, reconnecting
+16:06:45.865 Fail to connect, reconnecting
+16:06:52.954 Fail to connect, reconnecting
+16:08:59.657 Error in Write OPC : Invalid string NodeId without namespace index ('ns=').
+16:08:59.669 Error in undocking station 1
+16:13:53.752 Fail to connect, reconnecting
+16:14:00.841 Fail to connect, reconnecting
+16:14:07.927 Fail to connect, reconnecting
+16:19:17.063 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:19.131 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:21.217 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:23.303 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:25.380 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:27.462 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:29.527 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:19:31.619 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:20:44.654 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
+16:20:46.729 update timestamp failNo connection could be made because the target machine actively refused it. (127.0.0.1:8080)
