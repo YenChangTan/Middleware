@@ -31,11 +31,11 @@ namespace Middleware.BackgroundTask
             {
                 try
                 {
-                    Console.WriteLine((_modeConfiguration.Server.First().IP));
-                    Console.WriteLine(_modeConfiguration.Server.First().Port);
                     while (!_tcp.ConnectTcp(_modeConfiguration.Server.First().IP, _modeConfiguration.Server.First().Port.ToString()))
                     {
+                        
                         Logger.LogMessage("Fail to connect, reconnecting", "error");
+                        await Task.Delay(5000);
                     }
 
                     while (true)

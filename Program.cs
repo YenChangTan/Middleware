@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using System.Reflection;
 
 namespace Middleware
 {
@@ -18,12 +19,15 @@ namespace Middleware
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((context, config) =>
                 {
-                    config.AddJsonFile("appsetting.json", optional: false, reloadOnChange: true);
+                    var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    config.SetBasePath(basePath)
+                        .AddJsonFile("appsetting.json", optional: false, reloadOnChange: true);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                     var configuration = new ConfigurationBuilder()
-                        .SetBasePath(Directory.GetCurrentDirectory())
+                        .SetBasePath(basePath)
                         .AddJsonFile("appsetting.json")
                         .Build();
                     var applicationUrl = configuration["ApplicationUrl"];
